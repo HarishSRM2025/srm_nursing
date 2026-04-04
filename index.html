@@ -5,555 +5,218 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SRM Trichy College of Nursing</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,700;0,800;1,600;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Turret+Road:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<style>
-:root {
-  --primary:       #4c1d95;
-  --primary-dark:  #2e1065;
-  --primary-mid:   #5b21b6;
-  --primary-light: #7c3aed;
-  --accent:        #a855f7;
-  --accent-vivid:  #d946ef;
-  --gold:          #f59e0b;
-  --gold-light:    #fcd34d;
-  --teal:          #06b6d4;
-  --green:         #10b981;
-  --white:         #ffffff;
-  --off-white:     #faf5ff;
-  --light-bg:      #f3e8ff;
-  --text-dark:     #1e1033;
-  --text-body:     #374151;
-  --text-muted:    #6b7280;
-  --border:        #e9d5ff;
-  --nav-h:         78px;
-  --font-main:     'Poppins', sans-serif;
-  --font-cursive:  'Dancing Script', cursive;
-  --font-serif:    'Playfair Display', serif;
-  --ease:          0.3s cubic-bezier(0.4,0,0.2,1);
-}
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:var(--font-main);background:var(--white);color:var(--text-body);overflow-x:hidden}
-
-/* ── TOP BAR ── */
-.topbar{background:var(--primary-dark);color:rgba(255,255,255,.75);font-size:12px;padding:0 5%;display:flex;justify-content:space-between;align-items:center;height:38px}
-.topbar a{color:inherit;text-decoration:none;transition:color var(--ease)}
-.topbar a:hover{color:var(--gold-light)}
-.tb-left{display:flex;gap:22px;align-items:center}
-.tb-left span{display:flex;align-items:center;gap:6px}
-.tb-right{display:flex;gap:10px;align-items:center}
-.tb-pill{background:rgba(255,255,255,.09);padding:3px 13px;font-size:11px;letter-spacing:.07em;text-transform:uppercase;transition:background var(--ease)}
-.tb-pill:hover{background:var(--primary-light);color:#fff}
-.tb-apply{background:var(--gold);color:var(--primary-dark)!important;padding:4px 18px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;transition:background var(--ease);display:flex;align-items:center;gap:7px}
-.tb-apply:hover{background:var(--gold-light)}
-
-/* ── NAVBAR ── */
-nav{position:sticky;top:0;z-index:1000;background:var(--white);border-bottom:3px solid var(--primary);height:var(--nav-h);display:flex;align-items:center;padding:0 5%;gap:22px;transition:box-shadow var(--ease)}
-nav.scrolled{box-shadow:0 4px 24px rgba(76,29,149,.13)}
-.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;flex-shrink:0}
-.logo-badge{width:52px;height:52px;display:flex;align-items:center;justify-content:center}
-.logo-badge img{width:100%}
-.logo-txt .brand-srm{font-family:var(--font-serif);font-size:23px;font-weight:800;color:var(--primary);line-height:1;letter-spacing:-.4px}
-.logo-txt .brand-sub{font-size:10px;text-transform:uppercase;letter-spacing:.19em;color:var(--text-muted);font-weight:500;margin-top:2px}
-
-.nav-links{display:flex;list-style:none;flex:1;justify-content:center}
-.nav-links li{position:relative}
-.nav-links li>a{display:flex;align-items:center;gap:4px;padding:0 14px;height:var(--nav-h);font-size:12.5px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--text-body);text-decoration:none;border-bottom:3px solid transparent;margin-bottom:-3px;transition:color var(--ease),border-color var(--ease)}
-.nav-links li>a:hover,.nav-links li>a.active{color:var(--primary-light);border-bottom-color:var(--accent)}
-.chevron{font-size:8px;opacity:.5}
-.dropdown{display:none;position:absolute;top:100%;left:0;background:var(--white);min-width:210px;border-top:3px solid var(--accent);border:1px solid var(--border);border-top:3px solid var(--accent);z-index:9999;animation:dropIn .2s ease}
-@keyframes dropIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
-.nav-links li:hover .dropdown{display:block}
-.dropdown a{display:block!important;padding:10px 18px!important;font-size:12.5px!important;color:var(--text-body)!important;font-weight:400!important;text-transform:none!important;border-bottom:1px solid var(--border)!important;height:auto!important;margin-bottom:0!important;transition:background var(--ease),padding-left var(--ease)!important}
-.dropdown a:last-child{border-bottom:none!important}
-.dropdown a:hover{background:var(--light-bg)!important;color:var(--primary-light)!important;padding-left:24px!important}
-.nav-cta{background:var(--primary-light);color:#fff!important;padding:10px 20px;font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;flex-shrink:0;transition:background var(--ease);display:flex;align-items:center;gap:7px}
-.nav-cta:hover{background:var(--accent-vivid)}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;margin-left:auto}
-.hamburger span{width:24px;height:2px;background:var(--primary);display:block}
-
-/* ── HERO ── */
-.hero{position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden;background:var(--primary-dark)}
-.hero-scene{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(30,16,99,.93) 0%,rgba(46,16,101,.84) 38%,rgba(76,29,149,.52) 65%,rgba(76,29,149,.08) 100%);z-index:1}
-.hero-noise{position:absolute;inset:0;z-index:2;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='.03'/%3E%3C/svg%3E");opacity:.4}
-.hero-inner{position:relative;z-index:3;width:100%;padding:80px 5% 60px;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-
-.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.4);color:var(--gold-light);font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;padding:5px 16px;margin-bottom:20px}
-.hero-eyebrow::before{content:'';width:18px;height:1px;background:var(--gold)}
-.hero-cursive{font-family:var(--font-cursive);font-size:clamp(26px,3vw,40px);color:var(--gold-light);line-height:1;margin-bottom:8px;text-shadow:0 2px 20px rgba(245,158,11,.3)}
-.hero-h1{font-family:var(--font-serif);font-size:clamp(32px,4vw,58px);font-weight:800;color:var(--white);line-height:1.1;margin-bottom:18px}
-.hero-h1 em{color:var(--gold-light);font-style:italic}
-.hero-desc{font-size:15px;color:rgba(255,255,255,.66);line-height:1.8;max-width:480px;margin-bottom:34px;font-weight:300}
-.hero-btns{display:flex;gap:13px;flex-wrap:wrap;margin-bottom:46px}
-.btn-gold{background:var(--gold);color:var(--primary-dark);padding:14px 30px;font-weight:700;font-size:13px;letter-spacing:.09em;text-transform:uppercase;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:background var(--ease)}
-.btn-gold:hover{background:var(--gold-light)}
-.btn-outline-w{border:1.5px solid rgba(255,255,255,.38);color:rgba(255,255,255,.85);padding:14px 30px;font-weight:500;font-size:13px;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all var(--ease)}
-.btn-outline-w:hover{border-color:#fff;color:#fff;background:rgba(255,255,255,.07)}
-.hero-stats{display:flex;gap:38px;flex-wrap:wrap}
-.stat-num{font-family:var(--font-serif);font-size:38px;font-weight:800;color:#fff;line-height:1}
-.stat-num sup{font-size:19px;color:var(--gold-light)}
-.stat-lbl{font-size:10.5px;text-transform:uppercase;letter-spacing:.13em;color:rgba(255,255,255,.46);margin-top:4px;font-weight:500}
-
-.hero-card-wrap{display:flex;flex-direction:column;gap:16px}
-.enq-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.13);backdrop-filter:blur(16px);padding:30px}
-.enq-title{font-family:var(--font-serif);font-size:22px;font-weight:700;color:#fff;margin-bottom:4px}
-.enq-sub{font-size:11px;letter-spacing:.12em;color:rgba(255,255,255,.42);text-transform:uppercase;margin-bottom:22px}
-.f-row{margin-bottom:13px}
-.f-row label{display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.48);margin-bottom:6px;font-weight:600}
-.f-row input,.f-row select{width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.17);color:#fff;padding:11px 14px;font-family:var(--font-main);font-size:13px;outline:none;transition:border-color var(--ease);appearance:none}
-.f-row input::placeholder{color:rgba(255,255,255,.26)}
-.f-row input:focus,.f-row select:focus{border-color:var(--gold)}
-.f-row select option{background:var(--primary-dark);color:#fff}
-.f-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.btn-submit-card{width:100%;background:var(--gold);color:var(--primary-dark);border:none;padding:13px;font-weight:700;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;font-family:var(--font-main);margin-top:6px;transition:background var(--ease)}
-.btn-submit-card:hover{background:var(--gold-light)}
-.live-strip{background:rgba(168,85,247,.2);border-left:3px solid var(--accent);padding:12px 17px;display:flex;align-items:center;gap:12px}
-.live-badge{background:var(--accent-vivid);color:#fff;font-size:8.5px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;padding:3px 9px;flex-shrink:0;animation:pulse 2s ease-in-out infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.55}}
-.live-strip p{font-size:12px;color:rgba(255,255,255,.68);line-height:1.5}
-.live-strip p strong{color:rgba(255,255,255,.94)}
-
-/* ── MARQUEE ── */
-.marquee-bar{background:linear-gradient(90deg,var(--primary),var(--primary-mid));height:44px;display:flex;align-items:center;overflow:hidden}
-.mq-label{background:var(--gold);color:var(--primary-dark);font-size:10.5px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;padding:0 20px;height:100%;display:flex;align-items:center;gap:8px;flex-shrink:0;white-space:nowrap}
-.mq-track{overflow:hidden;flex:1}
-.mq-inner{display:flex;animation:mq 35s linear infinite;white-space:nowrap}
-@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-.mq-inner span{color:rgba(255,255,255,.84);font-size:12.5px;padding:0 28px;border-right:1px solid rgba(255,255,255,.14);line-height:44px;display:inline-block}
-.mq-inner span strong{color:var(--gold-light)}
-
-/* ── SECTIONS SHARED ── */
-section{padding:88px 5%}
-.s-eyebrow{display:flex;align-items:center;gap:12px;font-size:11px;text-transform:uppercase;letter-spacing:.22em;color:var(--primary-light);font-weight:700;margin-bottom:10px}
-.s-eyebrow::after{content:'';flex:0 0 36px;height:2px;background:var(--accent)}
-.s-cursive{font-family:var(--font-cursive);font-size:clamp(20px,2.4vw,30px);color:var(--accent);line-height:1;margin-bottom:4px}
-.s-title{font-family:var(--font-serif);font-size:clamp(26px,3vw,42px);font-weight:800;color:var(--primary-dark);line-height:1.15;margin-bottom:13px}
-.s-sub{font-size:15px;color:var(--text-muted);line-height:1.75;max-width:540px;font-weight:300}
-
-/* ── QUICK LINKS ── */
-.quicklinks{background:var(--off-white);padding:56px 5%}
-.ql-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid var(--border);margin-top:34px}
-.ql-item{padding:28px 20px;border-right:1px solid var(--border);text-decoration:none;display:flex;flex-direction:column;align-items:flex-start;gap:13px;position:relative;overflow:hidden;transition:background var(--ease)}
-.ql-item:last-child{border-right:none}
-.ql-item::after{content:'';position:absolute;bottom:0;left:0;width:0;height:3px;background:var(--primary-light);transition:width .4s ease}
-.ql-item:hover::after{width:100%}
-.ql-item:hover{background:var(--light-bg)}
-.ql-icon-wrap{width:46px;height:46px;background:linear-gradient(135deg,var(--primary),var(--primary-light));display:flex;align-items:center;justify-content:center;transition:background var(--ease)}
-.ql-item:hover .ql-icon-wrap{background:linear-gradient(135deg,var(--primary-light),var(--accent-vivid))}
-.ql-icon-wrap i{color:#fff;font-size:17px}
-.ql-label{font-size:12.5px;font-weight:600;color:var(--text-dark);line-height:1.3}
-.ql-arr{font-size:13px;color:var(--accent);margin-top:auto;font-weight:700}
-
-/* ── PROGRAMMES ── */
-.programmes{background:var(--white)}
-.prog-hdr{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:44px;flex-wrap:wrap;gap:20px}
-.prog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border)}
-.prog-card{background:var(--white);padding:36px 30px;position:relative;overflow:hidden;text-decoration:none;display:flex;flex-direction:column;transition:background var(--ease)}
-.prog-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:var(--primary);transition:width var(--ease),background var(--ease)}
-.prog-card:hover::before{width:5px;background:var(--accent)}
-.prog-card:hover{background:var(--off-white)}
-.prog-num{font-family:var(--font-serif);font-size:52px;font-weight:800;color:var(--border);line-height:1;margin-bottom:16px;transition:color var(--ease)}
-.prog-card:hover .prog-num{color:#e9d5ff}
-.prog-badge{font-size:10px;text-transform:uppercase;letter-spacing:.18em;color:var(--primary-light);font-weight:700;margin-bottom:7px}
-.prog-name{font-family:var(--font-serif);font-size:21px;font-weight:800;color:var(--primary-dark);margin-bottom:9px;line-height:1.2}
-.prog-dur{font-size:12px;color:var(--text-muted);display:flex;align-items:center;gap:8px;font-weight:500}
-.prog-dur::before{content:'';width:14px;height:1.5px;background:var(--accent)}
-.prog-desc{font-size:13.5px;color:var(--text-muted);line-height:1.7;margin-top:13px;flex:1;font-weight:300}
-.prog-link{display:flex;align-items:center;gap:7px;font-size:11.5px;font-weight:700;color:var(--primary-light);text-transform:uppercase;letter-spacing:.1em;margin-top:20px}
-
-/* ── ADMISSIONS ── */
-.admissions{background:linear-gradient(135deg,var(--primary-dark) 0%,#1e0a4e 40%,#2d0f6e 100%);position:relative;overflow:hidden}
-.admissions::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.015) 0,rgba(255,255,255,.015) 1px,transparent 0,transparent 50%);background-size:22px 22px}
-.adm-glow{position:absolute;width:600px;height:600px;background:radial-gradient(circle,rgba(168,85,247,.2) 0%,transparent 65%);top:-150px;right:-100px;pointer-events:none}
-.adm-inner{position:relative;z-index:1}
-.adm-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start;margin-top:44px}
-.adm-step{display:flex;gap:22px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.07)}
-.adm-step:first-child{padding-top:0}
-.adm-num{width:40px;height:40px;border:1.5px solid rgba(245,158,11,.5);display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:16px;font-weight:800;color:var(--gold-light);flex-shrink:0}
-.adm-step h4{font-size:14px;font-weight:700;color:#fff;margin-bottom:5px}
-.adm-step p{font-size:12.5px;color:rgba(255,255,255,.48);line-height:1.65;font-weight:300}
-.adm-box{border:1px solid rgba(255,255,255,.12);padding:34px}
-.adm-box-title{font-family:var(--font-serif);font-size:20px;font-weight:800;color:#fff;margin-bottom:22px}
-.adm-row{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.07);font-size:13px}
-.adm-row:last-of-type{border-bottom:none}
-.adm-key{color:rgba(255,255,255,.48);font-weight:400}
-.adm-val{color:#fff;font-weight:600}
-.adm-val.open{color:#34d399}
-.adm-val.doc{color:var(--gold-light)}
-.btn-adm-gold{display:block;text-align:center;background:var(--gold);color:var(--primary-dark);padding:14px;font-weight:800;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;margin-top:22px;transition:background var(--ease);display:flex;align-items:center;justify-content:center;gap:8px}
-.btn-adm-gold:hover{background:var(--gold-light)}
-.btn-adm-out{display:flex;align-items:center;justify-content:center;gap:8px;text-align:center;border:1.5px solid rgba(255,255,255,.22);color:rgba(255,255,255,.7);padding:12px;font-weight:500;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;margin-top:10px;transition:all var(--ease)}
-.btn-adm-out:hover{border-color:#fff;color:#fff}
-
-/* ── WHY US ── */
-.whyus{background:var(--light-bg)}
-.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);margin-top:46px}
-.why-card{background:var(--white);padding:34px 26px;transition:background var(--ease);position:relative;overflow:hidden}
-.why-card::after{content:'';position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,var(--primary-light),var(--accent));transform:scaleX(0);transform-origin:left;transition:transform .4s ease}
-.why-card:hover::after{transform:scaleX(1)}
-.why-card:hover{background:var(--primary-dark)}
-.why-icon-wrap{width:50px;height:50px;background:var(--light-bg);display:flex;align-items:center;justify-content:center;margin-bottom:16px;transition:background var(--ease)}
-.why-card:hover .why-icon-wrap{background:rgba(255,255,255,.08)}
-.why-icon-wrap i{color:var(--primary-light);font-size:22px;transition:color var(--ease)}
-.why-card:hover .why-icon-wrap i{color:var(--gold-light)}
-.why-num{font-family:var(--font-serif);font-size:40px;font-weight:800;color:var(--primary);line-height:1;margin-bottom:3px;transition:color var(--ease)}
-.why-card:hover .why-num{color:var(--gold-light)}
-.why-lbl{font-size:10.5px;text-transform:uppercase;letter-spacing:.14em;color:var(--text-muted);margin-bottom:12px;font-weight:600;transition:color var(--ease)}
-.why-card:hover .why-lbl{color:rgba(255,255,255,.44)}
-.why-desc{font-size:13px;color:var(--text-muted);line-height:1.7;font-weight:300;transition:color var(--ease)}
-.why-card:hover .why-desc{color:rgba(255,255,255,.55)}
-
-/* ── NOTICES ── */
-.notices{background:var(--white)}
-.notices-grid{display:grid;grid-template-columns:2fr 1fr;gap:36px;margin-top:44px}
-.panel-title{font-family:var(--font-serif);font-size:19px;font-weight:800;color:var(--primary-dark);padding:15px 0;border-bottom:2px solid var(--primary);display:flex;justify-content:space-between;align-items:center}
-.panel-title a{font-size:11.5px;font-weight:600;color:var(--primary-light);text-transform:uppercase;letter-spacing:.09em;text-decoration:none}
-.panel-title a:hover{color:var(--accent-vivid)}
-.notice-item{display:flex;gap:17px;padding:15px 0;border-bottom:1px solid var(--border);text-decoration:none;transition:background var(--ease),padding-left var(--ease)}
-.notice-item:hover{background:var(--off-white);padding-left:8px}
-.n-date{flex-shrink:0;width:48px;text-align:center}
-.n-dd{font-family:var(--font-serif);font-size:27px;font-weight:800;color:var(--primary-light);line-height:1}
-.n-mm{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--text-muted)}
-.n-tag{background:var(--light-bg);color:var(--primary-light);font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;padding:2px 9px;display:inline-block;margin-bottom:5px}
-.n-tag.new-t{background:#d1fae5;color:#065f46}
-.notice-item h4{font-size:13.5px;font-weight:600;color:var(--text-dark);line-height:1.4}
-.evt-card{border-left:3px solid var(--primary);padding:15px 17px;background:var(--off-white);margin-bottom:10px;text-decoration:none;display:block;transition:border-color var(--ease),background var(--ease)}
-.evt-card:hover{border-left-color:var(--accent-vivid);background:var(--light-bg)}
-.evt-tag{font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--primary-light);font-weight:700;margin-bottom:5px}
-.evt-card h4{font-size:13px;font-weight:600;color:var(--text-dark);line-height:1.35;margin-bottom:5px}
-.evt-date{font-size:11.5px;color:var(--text-muted);display:flex;align-items:center;gap:5px}
-
-/* ── FACILITIES ── */
-.facilities{background:var(--off-white)}
-.fac-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin-top:44px}
-.fac-card{background:var(--white);padding:30px 26px;position:relative;overflow:hidden;transition:background var(--ease)}
-.fac-bg-accent{position:absolute;top:-40px;right:-40px;width:130px;height:130px;background:linear-gradient(135deg,var(--primary-light),var(--accent));opacity:.06;transition:opacity var(--ease)}
-.fac-card:hover .fac-bg-accent{opacity:.14}
-.fac-icon-wrap{width:50px;height:50px;background:linear-gradient(135deg,var(--primary),var(--primary-light));display:flex;align-items:center;justify-content:center;margin-bottom:16px;transition:background var(--ease)}
-.fac-card:hover .fac-icon-wrap{background:linear-gradient(135deg,var(--primary-light),var(--accent-vivid))}
-.fac-icon-wrap i{color:#fff;font-size:20px}
-.fac-name{font-family:var(--font-serif);font-size:18px;font-weight:800;color:var(--primary-dark);margin-bottom:9px}
-.fac-desc{font-size:13px;color:var(--text-muted);line-height:1.7;font-weight:300}
-
-/* ── CONTACT ── */
-.contact{background:linear-gradient(135deg,#1a0a3d,var(--primary-dark),#1e0a4e);position:relative;overflow:hidden}
-.contact::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.015) 0,rgba(255,255,255,.015) 1px,transparent 0,transparent 40px)}
-.cta-glow{position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(217,70,239,.14) 0%,transparent 65%);bottom:-200px;left:10%;pointer-events:none}
-.contact-inner{position:relative;z-index:1}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border:1px solid rgba(255,255,255,.08);margin-top:44px}
-.c-col{padding:38px 34px;border-right:1px solid rgba(255,255,255,.08)}
-.c-col:last-child{border-right:none}
-.c-col-title{font-size:10.5px;text-transform:uppercase;letter-spacing:.2em;color:var(--gold);font-weight:700;margin-bottom:22px;display:flex;align-items:center;gap:8px}
-.c-col-title::after{content:'';flex:1;height:1px;background:rgba(255,255,255,.08)}
-.c-item{display:flex;gap:13px;margin-bottom:16px;align-items:flex-start}
-.c-item-icon{width:34px;height:34px;flex-shrink:0;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;transition:background var(--ease)}
-.c-item:hover .c-item-icon{background:rgba(168,85,247,.25)}
-.c-item-icon i{color:var(--accent);font-size:13px}
-.c-item h5{font-size:10.5px;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.38);margin-bottom:4px;font-weight:500}
-.c-item p,.c-item a{font-size:13.5px;color:rgba(255,255,255,.78);line-height:1.6;font-weight:300;text-decoration:none;display:flex;justify-content: center;}
-.c-item a:hover{color:var(--gold-light)}
-.social-row{display:flex;gap:9px;margin-top:8px}
-.soc-btn{width:37px;height:37px;border:1px solid rgba(255,255,255,.17);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.5);text-decoration:none;transition:all var(--ease)}
-.soc-btn:hover{border-color:var(--gold);color:var(--gold);background:rgba(245,158,11,.08)}
-.soc-btn i{font-size:13px}
-
-/* ══════════════════════════════════════
-   FOOTER  — Full Professional
-══════════════════════════════════════ */
-footer{background:#0d0620;padding:0}
-
-/* Alert Bar */
-.footer-alert{background:linear-gradient(90deg,var(--gold),#f6c949);padding:0 5%;display:flex;justify-content:space-between;align-items:center;height:50px}
-.footer-alert p{font-size:12.5px;font-weight:700;color:var(--primary-dark);display:flex;align-items:center;gap:9px;letter-spacing:.02em}
-.footer-alert p i{font-size:15px}
-.fa-apbtn{background:var(--primary-dark);color:#fff;padding:9px 22px;font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;display:flex;align-items:center;gap:7px;transition:background var(--ease);flex-shrink:0}
-.fa-apbtn:hover{background:var(--primary-light)}
-
-/* Footer Main */
-.footer-main{padding:54px 5% 38px;display:grid;grid-template-columns:2fr 1fr 1fr 1.3fr;gap:48px;border-bottom:1px solid rgba(255,255,255,.07)}
-
-/* Brand col */
-.footer-logo-row{display:flex;align-items:center;gap:11px;margin-bottom:16px;text-decoration:none}
-.fl-badge{width:42px;height:42px;background:linear-gradient(135deg,var(--primary),var(--primary-light));display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.fl-badge i{color:#fff;font-size:18px}
-.fl-txt .fl-srm{font-family:var(--font-serif);font-size:20px;font-weight:800;color:#fff;line-height:1}
-.fl-txt .fl-sub{font-size:9.5px;text-transform:uppercase;letter-spacing:.18em;color:rgba(255,255,255,.38);margin-top:2px}
-.footer-brand p{font-size:12.5px;color:rgba(255,255,255,.48);line-height:1.75;font-weight:300;margin-bottom:20px}
-.f-social{display:flex;gap:9px}
-.f-soc{width:34px;height:34px;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.48);text-decoration:none;transition:all var(--ease)}
-.f-soc:hover{background:var(--primary-light);color:#fff}
-.f-soc i{font-size:13px}
-
-/* Col headings */
-.fcol-title{font-size:11px;text-transform:uppercase;letter-spacing:.18em;color:var(--gold);font-weight:700;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.07)}
-
-/* Quick links / depts list */
-.footer-col ul{list-style:none}
-.footer-col ul li{margin-bottom:9px}
-.footer-col ul li a{font-size:12.5px;color:rgba(255,255,255,.52);text-decoration:none;display:flex;align-items:center;gap:7px;transition:color var(--ease),padding-left var(--ease);font-weight:400}
-.footer-col ul li a:hover{color:var(--gold-light);padding-left:5px}
-.footer-col ul li a i{font-size:9px;color:var(--accent);flex-shrink:0}
-
-/* Contact list in footer */
-.fcont-list{list-style:none}
-.fcont-list li{display:flex;gap:12px;align-items:flex-start;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.05)}
-.fcont-list li:last-child{border-bottom:none;margin-bottom:0}
-.fci{width:30px;height:30px;flex-shrink:0;background:rgba(168,85,247,.18);display:flex;align-items:center;justify-content:center}
-.fci i{color:var(--accent);font-size:12px}
-.fcont-list span{font-size:12px;color:rgba(255,255,255,.48);line-height:1.6;font-weight:300}
-.fcont-list a{color:rgba(255,255,255,.48);text-decoration:none;font-size:12px;font-weight:300;line-height:1.6;display:block;transition:color var(--ease)}
-.fcont-list a:hover{color:var(--gold-light)}
-
-/* Footer bottom */
-.footer-bottom{padding:18px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-.footer-bottom p{font-size:11.5px;color:rgba(255,255,255,.3)}
-.fbot-links{display:flex;gap:20px}
-.fbot-links a{font-size:11.5px;color:rgba(255,255,255,.3);text-decoration:none;transition:color var(--ease)}
-.fbot-links a:hover{color:var(--gold-light)}
-.fbot-accred{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
-.acc-badge{border:1px solid rgba(255,255,255,.12);padding:3px 12px;font-size:10px;color:rgba(255,255,255,.42);letter-spacing:.1em;font-weight:600;text-transform:uppercase;display:flex;align-items:center;gap:5px}
-
-/* ── SCROLL ANIMATIONS ── */
-.fade-up{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
-.fade-up.visible{opacity:1;transform:none}
-
-/* ── MOBILE NAV ── */
-.mobile-nav{display:none;background:var(--white);border-top:1px solid var(--border);padding:14px 5%}
-.mobile-nav.open{display:block}
-.mobile-nav a{display:block;padding:11px 0;font-size:13.5px;font-weight:500;color:var(--text-body);text-decoration:none;border-bottom:1px solid var(--border)}
-.mobile-nav a:hover{color:var(--primary-light)}
-
-/* ── RESPONSIVE ── */
-@media(max-width:1100px){.ql-grid{grid-template-columns:repeat(3,1fr)}.prog-grid{grid-template-columns:1fr 1fr}.why-grid{grid-template-columns:1fr 1fr}.fac-grid{grid-template-columns:1fr 1fr}.footer-main{grid-template-columns:1fr 1fr}}
-@media(max-width:900px){.hero-inner{grid-template-columns:1fr}.hero-card-wrap{display:none}.adm-grid{grid-template-columns:1fr}.contact-grid{grid-template-columns:1fr}.c-col{border-right:none;border-bottom:1px solid rgba(255,255,255,.07)}.notices-grid{grid-template-columns:1fr}}
-@media(max-width:768px){.topbar,.tb-right{display:none}.nav-links,.nav-cta{display:none}.hamburger{display:flex}.footer-main{grid-template-columns:1fr;gap:30px}.footer-alert{height:auto;padding:12px 5%;flex-direction:column;gap:10px;text-align:center}}
-@media(max-width:500px){.hero-stats{flex-direction:column;gap:16px}.hero-btns{flex-direction:column}.f-grid{grid-template-columns:1fr}.footer-bottom{flex-direction:column;text-align:center}}
-</style>
+<link rel="fav icon" href="./assets/images/fav.png">
+<link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
 
 <!-- TOP BAR -->
 <div class="topbar">
   <div class="tb-left">
-    <span><i class="fa-solid fa-phone-volume" style="color:var(--gold-light);font-size:10px"></i>&nbsp;+91 431-2516609</span>
-    <a href="#"><i class="fa-regular fa-envelope" style="color:var(--gold-light);font-size:10px"></i>&nbsp;admissions@nc-srm.edu.in</a>
-    <span><i class="fa-regular fa-clock" style="color:var(--gold-light);font-size:10px"></i>&nbsp;Mon–Sat 9:00 AM – 5:00 PM</span>
+    <span><i class="fa-solid fa-phone-volume"></i>&nbsp;+91 431-2516609</span>
+    <a href="#"><i class="fa-regular fa-envelope"></i>&nbsp;admissions@nc-srm.edu.in</a>
+    <span><i class="fa-regular fa-clock"></i>&nbsp;Mon–Sat 9:00 AM – 5:00 PM</span>
   </div>
   <div class="tb-right">
-    <a href="#" class="tb-pill"><i class="fa-solid fa-user" style="font-size:9px;margin-right:4px"></i>Student Portal</a>
-    <a href="#" class="tb-pill"><i class="fa-solid fa-lock" style="font-size:9px;margin-right:4px"></i>Staff Login</a>
+    <a href="#" class="tb-pill"><i class="fa-solid fa-user"></i>Student Portal</a>
+    <a href="#" class="tb-pill"><i class="fa-solid fa-lock"></i>Staff Login</a>
     <a href="#" class="tb-pill">NAAC</a>
-    <a href="#" class="tb-apply"><i class="fa-solid fa-arrow-right" style="font-size:10px"></i> Apply Now</a>
+    <a href="#" class="tb-apply"><i class="fa-solid fa-arrow-right"></i> Apply Now</a>
   </div>
 </div>
-
-<!-- NAVBAR -->
-<nav id="navbar">
-  <a href="#" class="nav-logo">
+<div class="myDiv">
+  <div class="logo-bar">
     <div class="logo-badge">
-      <img src="./logo.png" alt="">
+      <a href="#" class="nav-logo center-logo">
+        <img src="./assets/images/logo.png" alt="">
+      </a>
     </div>
-    <div class="logo-txt">
-      <div class="brand-srm">SRM Trichy</div>
-      <div class="brand-sub">College of Nursing</div>
-    </div>
-  </a>
+</div>
+<nav id="navbar">
+ 
 
   <ul class="nav-links">
+
     <li><a href="#" class="active">Home</a></li>
+    <!-- ADMINISTRATION -->
     <li>
-      <a href="#">About <i class="fa-solid fa-chevron-down chevron"></i></a>
+      <a href="#">Administration <i class="fa-solid fa-chevron-down chevron"></i></a>
       <div class="dropdown">
-        <a href="#"><i class="fa-solid fa-circle-info" style="color:var(--accent);font-size:9px;width:14px"></i> About Us</a>
-        <a href="#"><i class="fa-regular fa-eye" style="color:var(--accent);font-size:9px;width:14px"></i> Vision &amp; Mission</a>
-        <a href="#"><i class="fa-solid fa-user-tie" style="color:var(--accent);font-size:9px;width:14px"></i> Leadership</a>
-        <a href="#"><i class="fa-solid fa-certificate" style="color:var(--accent);font-size:9px;width:14px"></i> Accreditations</a>
+        <a href="#"><i class="fa-solid fa-sitemap"></i> Organization Chart</a>
+        <a href="#"><i class="fa-solid fa-scale-balanced"></i> Statutory Bodies</a>
+        <a href="#"><i class="fa-solid fa-file-lines"></i> Code of Conduct</a>
       </div>
     </li>
-    <li>
-      <a href="#">Programmes <i class="fa-solid fa-chevron-down chevron"></i></a>
-      <div class="dropdown">
-        <a href="#"><i class="fa-solid fa-graduation-cap" style="color:var(--accent);font-size:9px;width:14px"></i> B.Sc. Nursing</a>
-        <a href="#"><i class="fa-solid fa-graduation-cap" style="color:var(--accent);font-size:9px;width:14px"></i> M.Sc. Nursing</a>
-        <a href="#"><i class="fa-solid fa-graduation-cap" style="color:var(--accent);font-size:9px;width:14px"></i> Post Basic B.Sc.</a>
-        <a href="#"><i class="fa-solid fa-book" style="color:var(--accent);font-size:9px;width:14px"></i> Certificate Courses</a>
-      </div>
-    </li>
-    <li>
-      <a href="#">Admissions <i class="fa-solid fa-chevron-down chevron"></i></a>
-      <div class="dropdown">
-        <a href="#"><i class="fa-solid fa-list-check" style="color:var(--accent);font-size:9px;width:14px"></i> Admission Process</a>
-        <a href="#"><i class="fa-solid fa-clipboard-check" style="color:var(--accent);font-size:9px;width:14px"></i> Eligibility</a>
-        <a href="#"><i class="fa-solid fa-indian-rupee-sign" style="color:var(--accent);font-size:9px;width:14px"></i> Fee Structure</a>
-        <a href="#"><i class="fa-solid fa-award" style="color:var(--accent);font-size:9px;width:14px"></i> Scholarship</a>
-        <a href="#"><i class="fa-solid fa-pen-to-square" style="color:var(--accent);font-size:9px;width:14px"></i> Apply Online</a>
-      </div>
-    </li>
+    <!-- ACADEMICS -->
     <li>
       <a href="#">Academics <i class="fa-solid fa-chevron-down chevron"></i></a>
       <div class="dropdown">
-        <a href="#"><i class="fa-solid fa-building-columns" style="color:var(--accent);font-size:9px;width:14px"></i> Departments</a>
-        <a href="#"><i class="fa-solid fa-chalkboard-user" style="color:var(--accent);font-size:9px;width:14px"></i> Faculty</a>
-        <a href="#"><i class="fa-solid fa-file-alt" style="color:var(--accent);font-size:9px;width:14px"></i> Syllabus</a>
-        <a href="#"><i class="fa-solid fa-pen-ruler" style="color:var(--accent);font-size:9px;width:14px"></i> Examination</a>
-        <a href="#"><i class="fa-solid fa-chart-bar" style="color:var(--accent);font-size:9px;width:14px"></i> Results</a>
+        <a href="#"><i class="fa-solid fa-user-check"></i> Admission</a>
+        <a href="#"><i class="fa-solid fa-pen-to-square"></i> Application</a>
+        <a href="#"><i class="fa-solid fa-graduation-cap"></i> Courses Offered</a>
+        <a href="#"><i class="fa-solid fa-calendar-days"></i> Academic Calendar</a>
+        <a href="#"><i class="fa-solid fa-award"></i> Awards</a>
       </div>
     </li>
-    <li><a href="#">Research</a></li>
+
+    <!-- CLINICAL FACILITIES -->
     <li>
-      <a href="#">Student Life <i class="fa-solid fa-chevron-down chevron"></i></a>
+      <a href="#">Clinical Facilities <i class="fa-solid fa-chevron-down chevron"></i></a>
       <div class="dropdown">
-        <a href="#"><i class="fa-solid fa-bed" style="color:var(--accent);font-size:9px;width:14px"></i> Hostel</a>
-        <a href="#"><i class="fa-solid fa-users" style="color:var(--accent);font-size:9px;width:14px"></i> Clubs</a>
-        <a href="#"><i class="fa-solid fa-futbol" style="color:var(--accent);font-size:9px;width:14px"></i> Sports</a>
-        <a href="#"><i class="fa-solid fa-music" style="color:var(--accent);font-size:9px;width:14px"></i> Cultural Events</a>
+        <a href="#"><i class="fa-solid fa-hospital"></i> Hospital Facilities</a>
+        <a href="#"><i class="fa-solid fa-house-medical"></i> Community Settings</a>
+        <a href="#"><i class="fa-solid fa-kit-medical"></i> Outreach Camp</a>
       </div>
     </li>
-    <li><a href="#">Contact</a></li>
+
+    <!-- DEPARTMENTS -->
+    <li>
+      <a href="#">Departments <i class="fa-solid fa-chevron-down chevron"></i></a>
+      <div class="dropdown">
+        <a href="#"><i class="fa-solid fa-stethoscope"></i> Fundamentals of Nursing</a>
+        <a href="#"><i class="fa-solid fa-user-doctor"></i> Adult Health Nursing</a>
+        <a href="#"><i class="fa-solid fa-house-chimney-medical"></i> Community Health Nursing</a>
+        <a href="#"><i class="fa-solid fa-baby"></i> Child Health Nursing</a>
+        <a href="#"><i class="fa-solid fa-brain"></i> Mental Health Nursing</a>
+        <a href="#"><i class="fa-solid fa-venus"></i> OBG Nursing</a>
+      </div>
+    </li>
+
+    <!-- FACILITIES -->
+    <li>
+      <a href="#">Facilities <i class="fa-solid fa-chevron-down chevron"></i></a>
+      <div class="dropdown">
+
+        <a href="#"><i class="fa-solid fa-chalkboard"></i> Class Room</a>
+
+        <a href="#"><i class="fa-solid fa-building"></i> Multi Purpose Hall</a>
+
+        <a href="#"><i class="fa-solid fa-book"></i> Library</a>
+
+        <a href="#"><i class="fa-solid fa-flask"></i> Laboratory</a>
+
+        <a href="#"><i class="fa-solid fa-futbol"></i> Sports</a>
+
+        <a href="#"><i class="fa-solid fa-music"></i> Cultural</a>
+
+        <a href="#"><i class="fa-solid fa-bus"></i> Transport</a>
+
+        <a href="#"><i class="fa-solid fa-bed"></i> Hostel</a>
+
+        <a href="#"><i class="fa-solid fa-utensils"></i> Canteen</a>
+
+      </div>
+    </li>
+
+    <li><a href="#">Research</a></li>
+
+    <li><a href="#">Committees</a></li>
+
+    <li><a href="#">Placement</a></li>
+
+    <li><a href="#">Associations</a></li>
+
+    <li><a href="#">News</a></li>
+
+    <li><a href="#">Events</a></li>
+
   </ul>
 
-  <a href="#" class="nav-cta"><i class="fa-solid fa-pen-to-square" style="font-size:11px"></i> Apply 2025–26</a>
-  <div class="hamburger" onclick="toggleMobileNav()"><span></span><span></span><span></span></div>
-</nav>
 
+
+  <div class="hamburger" onclick="toggleMobileNav()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+</div>
+<div class="mobile-overlay" id="mobileOverlay" onclick="toggleMobileNav()"></div>
 <div class="mobile-nav" id="mobileNav">
-  <a href="#"><i class="fa-solid fa-house" style="width:20px;color:var(--accent)"></i> Home</a>
-  <a href="#"><i class="fa-solid fa-circle-info" style="width:20px;color:var(--accent)"></i> About Us</a>
-  <a href="#"><i class="fa-solid fa-graduation-cap" style="width:20px;color:var(--accent)"></i> Programmes</a>
-  <a href="#"><i class="fa-solid fa-list-check" style="width:20px;color:var(--accent)"></i> Admissions</a>
-  <a href="#"><i class="fa-solid fa-book-open" style="width:20px;color:var(--accent)"></i> Academics</a>
-  <a href="#"><i class="fa-solid fa-flask" style="width:20px;color:var(--accent)"></i> Research</a>
-  <a href="#"><i class="fa-solid fa-users" style="width:20px;color:var(--accent)"></i> Student Life</a>
-  <a href="#"><i class="fa-solid fa-phone" style="width:20px;color:var(--accent)"></i> Contact</a>
-  <a href="#" style="color:var(--primary-light);font-weight:700;margin-top:6px"><i class="fa-solid fa-arrow-right" style="width:20px"></i> Apply Now 2025–26</a>
+
+  <a href="#"><i class="fa-solid fa-house"></i> Home</a>
+
+  <!-- ADMINISTRATION -->
+  <div class="mobile-group">
+    <a href="#" onclick="toggleSubmenu(event)">
+      Administration <i class="fa-solid fa-chevron-down chevron"></i>
+    </a>
+    <div class="dropdown">
+      <a href="#"><i class="fa-solid fa-sitemap"></i> Organization Chart</a>
+      <a href="#"><i class="fa-solid fa-scale-balanced"></i> Statutory Bodies</a>
+      <a href="#"><i class="fa-solid fa-file-lines"></i> Code of Conduct</a>
+    </div>
+  </div>
+
+  <!-- ACADEMICS -->
+  <div class="mobile-group">
+    <a href="#" onclick="toggleSubmenu(event)">
+      Academics <i class="fa-solid fa-chevron-down chevron"></i>
+    </a>
+    <div class="dropdown">
+      <a href="#"><i class="fa-solid fa-user-check"></i> Admission</a>
+      <a href="#"><i class="fa-solid fa-pen-to-square"></i> Application</a>
+      <a href="#"><i class="fa-solid fa-graduation-cap"></i> Courses Offered</a>
+      <a href="#"><i class="fa-solid fa-calendar-days"></i> Academic Calendar</a>
+      <a href="#"><i class="fa-solid fa-award"></i> Awards</a>
+    </div>
+  </div>
+
+  <!-- CLINICAL -->
+  <div class="mobile-group">
+    <a href="#" onclick="toggleSubmenu(event)">
+      Clinical Facilities <i class="fa-solid fa-chevron-down chevron"></i>
+    </a>
+    <div class="dropdown">
+      <a href="#"><i class="fa-solid fa-hospital"></i> Hospital Facilities</a>
+      <a href="#"><i class="fa-solid fa-house-medical"></i> Community Settings</a>
+      <a href="#"><i class="fa-solid fa-kit-medical"></i> Outreach Camp</a>
+    </div>
+  </div>
+
+  <!-- DIRECT LINKS -->
+  <a href="#"><i class="fa-solid fa-flask"></i> Research</a>
+  <a href="#"><i class="fa-solid fa-users"></i> Committees</a>
+  <a href="#"><i class="fa-solid fa-briefcase"></i> Placement</a>
+  <a href="#"><i class="fa-solid fa-calendar"></i> Events</a>
+
+  <a href="#" class="mobile-apply">
+    <i class="fa-solid fa-arrow-right"></i> Apply Now 2025–26
+  </a>
+
 </div>
 
 <!-- HERO -->
 <section class="hero">
   <!-- SVG illustrated nursing college scene -->
-  <svg class="hero-scene" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <radialGradient id="rg1" cx="72%" cy="38%" r="58%"><stop offset="0%" stop-color="#5b21b6" stop-opacity=".55"/><stop offset="100%" stop-color="#1e0a4e" stop-opacity="0"/></radialGradient>
-      <radialGradient id="rg2" cx="15%" cy="85%" r="38%"><stop offset="0%" stop-color="#f59e0b" stop-opacity=".12"/><stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/></radialGradient>
-      <linearGradient id="bldg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3b0e8d" stop-opacity=".88"/><stop offset="100%" stop-color="#27086b" stop-opacity=".95"/></linearGradient>
-    </defs>
-    <rect width="1440" height="900" fill="url(#rg1)"/>
-    <rect width="1440" height="900" fill="url(#rg2)"/>
-    <!-- Horizon glow -->
-    <ellipse cx="1060" cy="830" rx="520" ry="110" fill="#7c3aed" opacity=".1"/>
-    <!-- Main building -->
-    <rect x="810" y="100" width="580" height="800" fill="url(#bldg)" opacity=".6"/>
-    <!-- Columns -->
-    <rect x="820" y="100" width="18" height="800" fill="#4c1d95" opacity=".4"/>
-    <rect x="1355" y="100" width="18" height="800" fill="#4c1d95" opacity=".4"/>
-    <!-- Windows rows -->
-    <g fill="#a78bfa" opacity=".22">
-      <rect x="855" y="145" width="52" height="38"/><rect x="927" y="145" width="52" height="38"/><rect x="999" y="145" width="52" height="38"/><rect x="1071" y="145" width="52" height="38"/><rect x="1143" y="145" width="52" height="38"/><rect x="1215" y="145" width="52" height="38"/><rect x="1287" y="145" width="52" height="38"/>
-      <rect x="855" y="210" width="52" height="38"/><rect x="927" y="210" width="52" height="38"/><rect x="999" y="210" width="52" height="38"/><rect x="1071" y="210" width="52" height="38"/><rect x="1143" y="210" width="52" height="38"/><rect x="1215" y="210" width="52" height="38"/><rect x="1287" y="210" width="52" height="38"/>
-      <rect x="855" y="275" width="52" height="38"/><rect x="927" y="275" width="52" height="38"/><rect x="999" y="275" width="52" height="38"/><rect x="1071" y="275" width="52" height="38"/><rect x="1143" y="275" width="52" height="38"/><rect x="1215" y="275" width="52" height="38"/><rect x="1287" y="275" width="52" height="38"/>
-      <rect x="855" y="340" width="52" height="38"/><rect x="927" y="340" width="52" height="38"/><rect x="999" y="340" width="52" height="38"/><rect x="1071" y="340" width="52" height="38"/><rect x="1143" y="340" width="52" height="38"/><rect x="1215" y="340" width="52" height="38"/><rect x="1287" y="340" width="52" height="38"/>
-      <rect x="855" y="405" width="52" height="38"/><rect x="927" y="405" width="52" height="38"/><rect x="999" y="405" width="52" height="38"/><rect x="1071" y="405" width="52" height="38"/><rect x="1143" y="405" width="52" height="38"/><rect x="1215" y="405" width="52" height="38"/><rect x="1287" y="405" width="52" height="38"/>
-    </g>
-    <!-- Lit windows golden -->
-    <g fill="#fcd34d" opacity=".38">
-      <rect x="927" y="145" width="52" height="38"/><rect x="1215" y="145" width="52" height="38"/>
-      <rect x="1071" y="210" width="52" height="38"/>
-      <rect x="855" y="340" width="52" height="38"/><rect x="999" y="275" width="52" height="38"/>
-      <rect x="1287" y="340" width="52" height="38"/>
-    </g>
-    <!-- Medical cross on rooftop -->
-    <rect x="1067" y="55" width="30" height="90" rx="5" fill="#f59e0b" opacity=".75"/>
-    <rect x="1040" y="80" width="84" height="30" rx="5" fill="#f59e0b" opacity=".75"/>
-    <!-- Building entrance -->
-    <path d="M1060 900 L1060 660 Q1065 600 1100 600 Q1135 600 1140 660 L1140 900Z" fill="#27086b" opacity=".7"/>
-    <path d="M1075 900 L1075 675 Q1080 630 1100 630 Q1120 630 1125 675 L1125 900Z" fill="#7c3aed" opacity=".12"/>
-    <!-- Ground -->
-    <rect x="0" y="828" width="1440" height="72" fill="#1e0a4e" opacity=".65"/>
-    <!-- Path -->
-    <ellipse cx="950" cy="860" rx="240" ry="28" fill="#5b21b6" opacity=".12"/>
-    <!-- Trees left side -->
-    <ellipse cx="100" cy="710" rx="58" ry="86" fill="#16073a" opacity=".65"/>
-    <rect x="93" y="768" width="14" height="130" fill="#16073a" opacity=".55"/>
-    <ellipse cx="205" cy="730" rx="48" ry="70" fill="#16073a" opacity=".55"/>
-    <rect x="199" y="782" width="12" height="118" fill="#16073a" opacity=".48"/>
-    <ellipse cx="300" cy="755" rx="40" ry="58" fill="#16073a" opacity=".45"/>
-    <rect x="295" y="800" width="10" height="100" fill="#16073a" opacity=".4"/>
-    <!-- Nurse silhouette -->
-    <g transform="translate(660,280)" opacity=".3">
-      <circle cx="60" cy="32" r="24" fill="#c4b5fd"/>
-      <rect x="40" y="10" width="40" height="14" rx="3" fill="#e9d5ff"/>
-      <rect x="52" y="7" width="16" height="8" rx="2" fill="#f59e0b"/>
-      <rect x="34" y="56" width="52" height="96" rx="7" fill="#c4b5fd"/>
-      <rect x="54" y="66" width="10" height="24" rx="3" fill="#f59e0b"/>
-      <rect x="47" y="72" width="24" height="10" rx="3" fill="#f59e0b"/>
-      <rect x="8" y="58" width="26" height="11" rx="4" fill="#c4b5fd" transform="rotate(18,8,58)"/>
-      <rect x="86" y="56" width="30" height="11" rx="4" fill="#c4b5fd" transform="rotate(-14,86,56)"/>
-      <rect x="37" y="150" width="21" height="70" rx="4" fill="#a78bfa"/>
-      <rect x="62" y="150" width="21" height="70" rx="4" fill="#a78bfa"/>
-    </g>
-    <!-- Stethoscope accent -->
-    <path d="M720 640 Q740 614 760 640 Q780 665 800 640" stroke="#f59e0b" stroke-width="4" fill="none" opacity=".28" stroke-linecap="round"/>
-    <circle cx="720" cy="640" r="9" fill="none" stroke="#f59e0b" stroke-width="3.5" opacity=".28"/>
-    <circle cx="800" cy="640" r="12" fill="none" stroke="#f59e0b" stroke-width="4" opacity=".28"/>
-    <!-- Decorative rings -->
-    <circle cx="1400" cy="180" r="130" fill="none" stroke="#7c3aed" stroke-width=".8" opacity=".2"/>
-    <circle cx="1400" cy="180" r="95" fill="none" stroke="#a78bfa" stroke-width=".8" opacity=".15"/>
-    <!-- Particles -->
-    <circle cx="185" cy="195" r="3" fill="#a78bfa" opacity=".45"/>
-    <circle cx="510" cy="140" r="4" fill="#fcd34d" opacity=".3"/>
-    <circle cx="650" cy="320" r="2.5" fill="#c4b5fd" opacity=".5"/>
-    <circle cx="320" cy="460" r="3" fill="#a78bfa" opacity=".3"/>
-    <circle cx="1320" cy="510" r="4" fill="#fcd34d" opacity=".18"/>
-    <circle cx="75" cy="400" r="2" fill="#a78bfa" opacity=".35"/>
-    <!-- Cross watermark -->
-    <rect x="1370" y="610" width="16" height="56" rx="4" fill="#7c3aed" opacity=".14"/>
-    <rect x="1352" y="628" width="52" height="20" rx="4" fill="#7c3aed" opacity=".14"/>
-  </svg>
-  <div class="hero-overlay"></div>
-  <div class="hero-noise"></div>
+  
   <div class="hero-inner">
+    <div class="hero-card-wrap">
+      <div class="img">
+        <img src="./assets/images/banner/1.jpeg" alt="">
+      </div>
+    </div>
     <div>
       <div class="hero-eyebrow">Admissions Open 2025–26</div>
       <div class="hero-cursive">Shaping Tomorrow's</div>
-      <h1 class="hero-h1"><em>Compassionate</em><br>Healthcare Leaders</h1>
-      <p class="hero-desc">SRM Trichy College of Nursing delivers world-class nursing education rooted in clinical excellence, ethical practice, and deep commitment to community health.</p>
+        <h1 class="hero-h1">SRM Trichy College of Nursing</h1>
+        <p class="hero-desc">
+        SRM Trichy College of Nursing is a member of SRMIST Trust established in 2018.
+        The campus is located at Trichy–Chennai highways near Samayapuram in a
+        green and spacious environment dedicated to nursing education,
+        practice and research.
+        </p>
       <div class="hero-btns">
         <a href="#" class="btn-gold"><i class="fa-solid fa-pen-to-square"></i> Apply for Admission</a>
         <a href="#" class="btn-outline-w"><i class="fa-solid fa-book-open"></i> Explore Programmes</a>
       </div>
-      <div class="hero-stats">
-        <div><div class="stat-num">2000<sup>+</sup></div><div class="stat-lbl">Graduates</div></div>
-        <div><div class="stat-num">98<sup>%</sup></div><div class="stat-lbl">Placement Rate</div></div>
-        <div><div class="stat-num">25<sup>+</sup></div><div class="stat-lbl">Years Excellence</div></div>
-      </div>
     </div>
-    <div class="hero-card-wrap">
-      <div class="enq-card">
-        <div class="enq-title">Quick Enquiry</div>
-        <div class="enq-sub">Admissions 2025–26 · All Programmes</div>
-        <div class="f-grid">
-          <div class="f-row"><label>First Name</label><input type="text" placeholder="Your name"></div>
-          <div class="f-row"><label>Mobile</label><input type="tel" placeholder="+91 XXXXX"></div>
-        </div>
-        <div class="f-row"><label>Email Address</label><input type="email" placeholder="your@email.com"></div>
-        <div class="f-row">
-          <label>Programme of Interest</label>
-          <select><option value="">Select Programme</option><option>B.Sc. Nursing (4 Years)</option><option>M.Sc. Nursing (2 Years)</option><option>Post Basic B.Sc. Nursing</option></select>
-        </div>
-        <button class="btn-submit-card"><i class="fa-solid fa-paper-plane" style="margin-right:6px"></i>Submit Enquiry</button>
-      </div>
-      <div class="live-strip">
-        <span class="live-badge">● Live</span>
-        <p><strong>TNMGRMU Counselling 2025</strong> — Online registration closes April 30. Check eligibility now.</p>
-      </div>
-    </div>
+    
   </div>
 </section>
-
-<!-- MARQUEE -->
 <div class="marquee-bar">
-  <div class="mq-label"><i class="fa-solid fa-bell" style="font-size:11px"></i> Latest News</div>
+  <div class="mq-label"><i class="fa-solid fa-bell"></i> Latest News</div>
   <div class="mq-track"><div class="mq-inner">
     <span><strong>Admissions Open:</strong> B.Sc. Nursing 2025–26 — Apply before April 30</span>
     <span><strong>Result:</strong> Final Year M.Sc. Nursing Nov 2024 Exam Results Published</span>
@@ -569,13 +232,97 @@ footer{background:#0d0620;padding:0}
     <span><strong>Placement:</strong> 100% Placement — Apollo, Fortis, AIIMS & more</span>
   </div></div>
 </div>
+<section class="about-college-section">
+  <div class="container">
+    <div class="aboutSection">
+        <div class="aboutContent">
+            <span class="s-eyebrow">About</span>
+            <h2 class="s-title">About SRM Trichy College of Nursing</h2>
+            <p>SRM Trichy College of Nursing is a member of SRMIST Trust.The college was started in 2018 and is located at Trichy–Chennai Highway near Samayapuram in a green and spacious campus.Students are encouraged to participate in curricular, co-curricular and extracurricular activities to become globally competitive nursing professionals.</p>
+        </div>
+        <div class="aboutimage">
+            <img src="./assets/images/banner/1.jpeg" alt="">
+        </div>
+    </div>
+  </div>
+</section>
+
+<section class="vision-mission">
+  <div class="combineDiv">
+    <div class="vision">
+      <h2 class="s-title">Vision</h2>
+      <p>To prepare students to become empathetic, dedicated and compassionate healthcare providers and make the institution known for its research skills that transform lives.</p>
+    </div>
+    <div class="mission">
+      <h2 class="s-title">Mission</h2>
+      <p>Promote high quality education with global outlook.Encourage lifelong learning and professional development.Foster innovative research benefiting humanity.Create compassionate healthcare providers for society.Develop leadership and self motivation among students.</p>
+    </div>
+  </div>
+</section>
+<section class="management-section">
+
+<h2 class="s-title">Our Management</h2>
+
+<div class="management-grid">
+
+<div class="management-card">
+<h3>Dr. R. Shivakumar</h3>
+<p>Chairman</p>
+<p>SRM Ramapuram & Trichy Campus</p>
+</div>
+
+<div class="management-card">
+<h3>Mr. S. Niranjan</h3>
+<p>Co-Chairman</p>
+<p>SRM Ramapuram & Trichy Campus</p>
+</div>
+
+</div>
+
+</section>
+<section class="chairman-desk-section">
+
+<h1 class="s-title">Chairman's Desk</h1>
+
+<p>
+It is my immense pleasure to welcome you to SRM Trichy College of Nursing.
+The institution aims to equip students with knowledge,
+skills and attitudes necessary for nursing care.
+</p>
+
+<p>
+Students participate in curricular, co-curricular and
+community service activities that help them develop
+physically, mentally, intellectually and spiritually.
+</p>
+
+</section>
+<section class="principal-desk-section">
+
+<h1 class="s-title">Principal's Desk</h1>
+
+<p>
+SRM Trichy College of Nursing is located in a healthy and
+eco-friendly campus environment. Our institution
+focuses on delivering high quality nursing education
+with strong clinical exposure.
+</p>
+
+<p>
+Students gain hands-on experience in the 1575 bedded
+Trichy SRM Medical College Hospital.
+</p>
+
+</section>
+<!-- MARQUEE -->
+
 
 <!-- QUICK LINKS -->
 <section class="quicklinks">
   <div class="s-eyebrow">Quick Access</div>
   <div class="s-cursive">Official Services</div>
   <div class="s-title">Important Links</div>
-  <div class="ql-grid fade-up">
+  <div class="ql-grid">
     <a class="ql-item" href="#"><div class="ql-icon-wrap"><i class="fa-solid fa-file-pen"></i></div><div class="ql-label">Online Admission Portal</div><div class="ql-arr"><i class="fa-solid fa-arrow-right"></i></div></a>
     <a class="ql-item" href="#"><div class="ql-icon-wrap"><i class="fa-solid fa-chart-bar"></i></div><div class="ql-label">Exam Results & Hall Tickets</div><div class="ql-arr"><i class="fa-solid fa-arrow-right"></i></div></a>
     <a class="ql-item" href="#"><div class="ql-icon-wrap"><i class="fa-solid fa-indian-rupee-sign"></i></div><div class="ql-label">Fee Payment Portal</div><div class="ql-arr"><i class="fa-solid fa-arrow-right"></i></div></a>
@@ -593,14 +340,32 @@ footer{background:#0d0620;padding:0}
       <div class="s-title">Nursing Programmes</div>
       <p class="s-sub">Approved by INC & affiliated to TNMGRMU — blending rigorous academics with clinical training.</p>
     </div>
-    <a href="#" style="background:var(--primary-light);color:#fff;padding:13px 26px;font-size:12px;letter-spacing:.08em;font-weight:700;text-transform:uppercase;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:background var(--ease);white-space:nowrap;height:fit-content" onmouseover="this.style.background='var(--accent)'" onmouseout="this.style.background='var(--primary-light)'">
+    <a href="#" class="prog-view-all">
       <i class="fa-solid fa-grid-2"></i> View All Programmes
     </a>
   </div>
-  <div class="prog-grid fade-up">
-    <a class="prog-card" href="#"><div class="prog-num">01</div><div class="prog-badge">Undergraduate</div><div class="prog-name">B.Sc. Nursing</div><div class="prog-dur">4 Years Full-Time</div><p class="prog-desc">Comprehensive programme covering medical-surgical nursing, community health, paediatrics, obstetrics, and psychiatric nursing.</p><div class="prog-link"><i class="fa-solid fa-arrow-right"></i> Learn More</div></a>
-    <a class="prog-card" href="#"><div class="prog-num">02</div><div class="prog-badge">Postgraduate</div><div class="prog-name">M.Sc. Nursing</div><div class="prog-dur">2 Years Full-Time</div><p class="prog-desc">Advanced clinical and research programme with specialisations in Medical-Surgical, OBG, Child Health, Mental Health & Community Nursing.</p><div class="prog-link"><i class="fa-solid fa-arrow-right"></i> Learn More</div></a>
-    <a class="prog-card" href="#"><div class="prog-num">03</div><div class="prog-badge">Post-Basic</div><div class="prog-name">Post Basic B.Sc. Nursing</div><div class="prog-dur">2 Years Full-Time</div><p class="prog-desc">Designed for registered nurses seeking to upgrade qualifications with academic depth and advanced clinical competencies.</p><div class="prog-link"><i class="fa-solid fa-arrow-right"></i> Learn More</div></a>
+  <div class="prog-grid">
+    <a class="prog-card" href="#"><div class="prog-num">01</div>
+      <div class="prog-badge">Diploma</div>
+      <div class="prog-name">DGNM</div>
+      <div class="prog-dur">3 years programme</div>
+      <p class="prog-desc">Eligibility: 10+2 with English with minimum 40%.Only female candidates eligible.</p>
+      <div class="prog-link"><i class="fa-solid fa-arrow-right"></i> Learn More</div>
+    </a>
+    <a class="prog-card" href="#"><div class="prog-num">02</div>
+      <div class="prog-badge">Undergraduate</div>
+      <div class="prog-name">B.Sc Nursing</div>
+      <div class="prog-dur">4 years programme</div>
+      <p class="prog-desc">Eligibility: 10+2 with English with minimum 40%.Only female candidates eligible.</p>
+      <div class="prog-link"><i class="fa-solid fa-arrow-right"></i> Learn More</div>
+    </a>
+    <a class="prog-card" href="#"><div class="prog-num">02</div>
+      <div class="prog-badge">Postgraduate</div>
+      <div class="prog-name">M.Sc Nursing</div>
+      <div class="prog-dur">2 years programme</div>
+      <p class="prog-desc">Medical Surgical Nursing, Paediatric Nursing, Psychiatric Nursing, Community Health Nursing.</p>
+      <div class="prog-link"><i class="fa-solid fa-arrow-right"></i> Learn More</div>
+    </a>
   </div>
 </section>
 
@@ -608,25 +373,27 @@ footer{background:#0d0620;padding:0}
 <section class="admissions">
   <div class="adm-glow"></div>
   <div class="adm-inner">
-    <div class="s-eyebrow" style="color:var(--gold-light)"><span>Admissions 2025–26</span><span style="background:var(--gold);height:2px;width:36px;display:inline-block;margin-left:0"></span></div>
-    <div class="s-cursive" style="color:var(--gold-light)">Join Our Family</div>
-    <div class="s-title" style="color:#fff">How to Apply</div>
-    <div class="adm-grid fade-up">
+     <div>
+      <div class="s-eyebrow">Admissions 2025–26</div>
+      <div class="s-cursive">Join Our Family</div>
+      <div class="s-title">How to Apply</div>
+     </div>
+    <div class="adm-grid">
       <div>
-        <div class="adm-step"><div class="adm-num">01</div><div><h4><i class="fa-solid fa-clipboard-check" style="color:var(--gold-light);margin-right:7px;font-size:12px"></i>Check Eligibility</h4><p>10+2 with Physics, Chemistry, Biology. Minimum 45% marks. Age 17–35 years as per INC guidelines.</p></div></div>
-        <div class="adm-step"><div class="adm-num">02</div><div><h4><i class="fa-solid fa-computer" style="color:var(--gold-light);margin-right:7px;font-size:12px"></i>Register Online</h4><p>Complete online application on our portal. Upload scanned documents and passport photograph.</p></div></div>
-        <div class="adm-step"><div class="adm-num">03</div><div><h4><i class="fa-solid fa-list-ol" style="color:var(--gold-light);margin-right:7px;font-size:12px"></i>TNMGRMU Counselling</h4><p>Attend state counselling per TN government schedule. Rank-based allotment for government quota seats.</p></div></div>
-        <div class="adm-step"><div class="adm-num">04</div><div><h4><i class="fa-solid fa-folder-open" style="color:var(--gold-light);margin-right:7px;font-size:12px"></i>Document Verification</h4><p>Report with originals, DD for fees, and medical fitness certificate from a registered doctor.</p></div></div>
+        <div class="adm-step"><div class="adm-num">01</div><div><h4><i class="fa-solid fa-clipboard-check" ></i>Check Eligibility</h4><p>10+2 with Physics, Chemistry, Biology. Minimum 45% marks. Age 17–35 years as per INC guidelines.</p></div></div>
+        <div class="adm-step"><div class="adm-num">02</div><div><h4><i class="fa-solid fa-computer" ></i>Register Online</h4><p>Complete online application on our portal. Upload scanned documents and passport photograph.</p></div></div>
+        <div class="adm-step"><div class="adm-num">03</div><div><h4><i class="fa-solid fa-list-ol" ></i>TNMGRMU Counselling</h4><p>Attend state counselling per TN government schedule. Rank-based allotment for government quota seats.</p></div></div>
+        <div class="adm-step"><div class="adm-num">04</div><div><h4><i class="fa-solid fa-folder-open" ></i>Document Verification</h4><p>Report with originals, DD for fees, and medical fitness certificate from a registered doctor.</p></div></div>
       </div>
       <div>
         <div class="adm-box">
-          <div class="adm-box-title"><i class="fa-solid fa-circle-info" style="color:var(--gold);margin-right:10px"></i>2025–26 Admission Status</div>
-          <div class="adm-row"><span class="adm-key">Application Status</span><span class="adm-val open"><i class="fa-solid fa-circle" style="font-size:8px;margin-right:4px"></i>Open</span></div>
+          <div class="adm-box-title"><i class="fa-solid fa-circle-info" ></i>2025–26 Admission Status</div>
+          <div class="adm-row"><span class="adm-key">Application Status</span><span class="adm-val open"><i class="fa-solid fa-circle" ></i>Open</span></div>
           <div class="adm-row"><span class="adm-key">Last Date to Apply</span><span class="adm-val">April 30, 2025</span></div>
           <div class="adm-row"><span class="adm-key">Entrance Exam</span><span class="adm-val">TNMGRMU / Mgmt</span></div>
           <div class="adm-row"><span class="adm-key">Seats Available</span><span class="adm-val">60 + Mgmt Quota</span></div>
           <div class="adm-row"><span class="adm-key">Annual Tuition Fee</span><span class="adm-val">₹75K – ₹1.2L</span></div>
-          <div class="adm-row"><span class="adm-key">Scholarship</span><span class="adm-val doc"><i class="fa-solid fa-check" style="font-size:10px;margin-right:4px"></i>Available</span></div>
+          <div class="adm-row"><span class="adm-key">Scholarship</span><span class="adm-val doc"><i class="fa-solid fa-check" ></i>Available</span></div>
           <a href="#" class="btn-adm-gold"><i class="fa-solid fa-pen-to-square"></i> Start Application</a>
           <a href="#" class="btn-adm-out"><i class="fa-solid fa-download"></i> Download Prospectus</a>
         </div>
@@ -640,7 +407,7 @@ footer{background:#0d0620;padding:0}
   <div class="s-eyebrow">Why Choose Us</div>
   <div class="s-cursive">Our Excellence</div>
   <div class="s-title">What Sets Us Apart</div>
-  <div class="why-grid fade-up">
+  <div class="why-grid">
     <div class="why-card"><div class="why-icon-wrap"><i class="fa-solid fa-award"></i></div><div class="why-num">25+</div><div class="why-lbl">Years of Excellence</div><p class="why-desc">Two decades of producing competent, compassionate nursing professionals serving leading hospitals nationwide.</p></div>
     <div class="why-card"><div class="why-icon-wrap"><i class="fa-solid fa-hospital"></i></div><div class="why-num">12</div><div class="why-lbl">Clinical Partners</div><p class="why-desc">Students train at SRM Group hospitals, government medical centres, and community health units.</p></div>
     <div class="why-card"><div class="why-icon-wrap"><i class="fa-solid fa-briefcase"></i></div><div class="why-num">98%</div><div class="why-lbl">Placement Rate</div><p class="why-desc">Graduates are sought after by top healthcare providers across India and internationally in Gulf countries and UK.</p></div>
@@ -653,21 +420,21 @@ footer{background:#0d0620;padding:0}
   <div class="s-eyebrow">Updates</div>
   <div class="s-cursive">Stay Informed</div>
   <div class="s-title">Notices & Events</div>
-  <div class="notices-grid fade-up">
+  <div class="notices-grid">
     <div>
-      <div class="panel-title"><span><i class="fa-solid fa-bell" style="color:var(--primary-light);margin-right:8px"></i>Official Notices</span><a href="#">View All <i class="fa-solid fa-arrow-right" style="font-size:9px"></i></a></div>
-      <a class="notice-item" href="#"><div class="n-date"><div class="n-dd">28</div><div class="n-mm">Mar</div></div><div><span class="n-tag new-t"><i class="fa-solid fa-circle" style="font-size:7px;margin-right:3px"></i>New</span><h4>B.Sc. Nursing 2025–26 Online Application Form Released — Apply Now</h4></div></a>
+      <div class="panel-title"><span><i class="fa-solid fa-bell" ></i>Official Notices</span><a href="#">View All <i class="fa-solid fa-arrow-right" ></i></a></div>
+      <a class="notice-item" href="#"><div class="n-date"><div class="n-dd">28</div><div class="n-mm">Mar</div></div><div><span class="n-tag new-t"><i class="fa-solid fa-circle"></i>New</span><h4>B.Sc. Nursing 2025–26 Online Application Form Released — Apply Now</h4></div></a>
       <a class="notice-item" href="#"><div class="n-date"><div class="n-dd">22</div><div class="n-mm">Mar</div></div><div><span class="n-tag">Exam</span><h4>Final Year M.Sc. Nursing Practical Exam Schedule — April 2025</h4></div></a>
       <a class="notice-item" href="#"><div class="n-date"><div class="n-dd">15</div><div class="n-mm">Mar</div></div><div><span class="n-tag">Academic</span><h4>Revised Academic Calendar 2024–25 — Download PDF</h4></div></a>
       <a class="notice-item" href="#"><div class="n-date"><div class="n-dd">10</div><div class="n-mm">Mar</div></div><div><span class="n-tag">Hostel</span><h4>Hostel Fee Payment Deadline — March 31, 2025</h4></div></a>
       <a class="notice-item" href="#"><div class="n-date"><div class="n-dd">01</div><div class="n-mm">Mar</div></div><div><span class="n-tag">Result</span><h4>III Year B.Sc. Nursing Nov 2024 Examination Results Published</h4></div></a>
     </div>
     <div>
-      <div class="panel-title" style="margin-bottom:18px"><span><i class="fa-solid fa-calendar-days" style="color:var(--primary-light);margin-right:8px"></i>Upcoming Events</span><a href="#">View All <i class="fa-solid fa-arrow-right" style="font-size:9px"></i></a></div>
-      <a class="evt-card" href="#"><div class="evt-tag"><i class="fa-regular fa-calendar" style="margin-right:5px"></i>May 12, 2025</div><h4>International Nurses Day — Grand Celebration & Awards</h4><div class="evt-date"><i class="fa-solid fa-location-dot" style="color:var(--accent);font-size:10px"></i>&nbsp;College Auditorium</div></a>
-      <a class="evt-card" href="#"><div class="evt-tag"><i class="fa-regular fa-calendar" style="margin-right:5px"></i>May 20–22, 2025</div><h4>Advanced Critical Care Nursing — CME Workshop</h4><div class="evt-date"><i class="fa-solid fa-location-dot" style="color:var(--accent);font-size:10px"></i>&nbsp;Simulation Lab</div></a>
-      <a class="evt-card" href="#"><div class="evt-tag"><i class="fa-regular fa-calendar" style="margin-right:5px"></i>June 5, 2025</div><h4>Annual Blood Donation Camp — Community Health Drive</h4><div class="evt-date"><i class="fa-solid fa-location-dot" style="color:var(--accent);font-size:10px"></i>&nbsp;College Campus</div></a>
-      <a class="evt-card" href="#"><div class="evt-tag"><i class="fa-regular fa-calendar" style="margin-right:5px"></i>June 15, 2025</div><h4>Campus Placement Drive 2025 — Apollo & Fortis</h4><div class="evt-date"><i class="fa-solid fa-location-dot" style="color:var(--accent);font-size:10px"></i>&nbsp;Placement Cell</div></a>
+      <div class="panel-title" ><span><i class="fa-solid fa-calendar-days" ></i>Upcoming Events</span><a href="#">View All <i class="fa-solid fa-arrow-right" ></i></a></div>
+      <a class="evt-card" href="#"><div class="evt-tag"><i class="fa-regular fa-calendar"></i>May 12, 2025</div><h4>International Nurses Day — Grand Celebration & Awards</h4><div class="evt-date"><i class="fa-solid fa-location-dot"></i>&nbsp;College Auditorium</div></a>
+      <a class="evt-card" href="#"><div class="evt-tag"><i class="fa-regular fa-calendar"></i>May 20–22, 2025</div><h4>Advanced Critical Care Nursing — CME Workshop</h4><div class="evt-date"><i class="fa-solid fa-location-dot"></i>&nbsp;Simulation Lab</div></a>
+      <a class="evt-card" href="#"><div class="evt-tag"><i class="fa-regular fa-calendar"></i>June 5, 2025</div><h4>Annual Blood Donation Camp — Community Health Drive</h4><div class="evt-date"><i class="fa-solid fa-location-dot"></i>&nbsp;College Campus</div></a>
+      <a class="evt-card" href="#"><div class="evt-tag"><i class="fa-regular fa-calendar"></i>June 15, 2025</div><h4>Campus Placement Drive 2025 — Apollo & Fortis</h4><div class="evt-date"><i class="fa-solid fa-location-dot"></i>&nbsp;Placement Cell</div></a>
     </div>
   </div>
 </section>
@@ -678,7 +445,7 @@ footer{background:#0d0620;padding:0}
   <div class="s-cursive">Our Campus</div>
   <div class="s-title">World-Class Facilities</div>
   <p class="s-sub">State-of-the-art infrastructure designed to provide the best learning environment for future nurses.</p>
-  <div class="fac-grid fade-up">
+  <div class="fac-grid">
     <div class="fac-card"><div class="fac-bg-accent"></div><div class="fac-icon-wrap"><i class="fa-solid fa-kit-medical"></i></div><div class="fac-name">Advanced Simulation Lab</div><p class="fac-desc">High-fidelity patient simulators and clinical skills stations for hands-on practice before hospital postings.</p></div>
     <div class="fac-card"><div class="fac-bg-accent"></div><div class="fac-icon-wrap"><i class="fa-solid fa-book-open-reader"></i></div><div class="fac-name">Digital Library</div><p class="fac-desc">5,000+ books, 50+ journals, and full access to PubMed, CINAHL, and NMC digital resources.</p></div>
     <div class="fac-card"><div class="fac-bg-accent"></div><div class="fac-icon-wrap"><i class="fa-solid fa-hospital"></i></div><div class="fac-name">On-Campus Clinical Wards</div><p class="fac-desc">Dedicated nursing wards with real clinical exposure within campus, supplemented by hospital postings.</p></div>
@@ -692,10 +459,10 @@ footer{background:#0d0620;padding:0}
 <section class="contact">
   <div class="cta-glow"></div>
   <div class="contact-inner">
-    <div class="s-eyebrow" style="color:var(--gold-light)">Contact Us<span style="height:2px;width:36px;background:var(--gold);display:inline-block;margin-left:12px;vertical-align:middle"></span></div>
-    <div class="s-cursive" style="color:var(--gold-light)">We're Here to Help</div>
-    <div class="s-title" style="color:#fff">Get in Touch</div>
-    <div class="contact-grid fade-up">
+    <div class="s-eyebrow">Contact Us</div>
+    <div class="s-cursive">We're Here to Help</div>
+    <div class="s-title">Get in Touch</div>
+    <div class="contact-grid">
       <div class="c-col">
         <div class="c-col-title">Address & Location</div>
         <div class="c-item"><div class="c-item-icon"><i class="fa-solid fa-location-dot"></i></div><div><h5>College Address</h5><p>SRM Trichy College of Nursing<br>Trichy–Chennai Highway (NH-45),<br>Irungalur, Tiruchirappalli – 621 105,<br>Tamil Nadu, India</p></div></div>
@@ -712,7 +479,7 @@ footer{background:#0d0620;padding:0}
         <div class="c-item"><div class="c-item-icon"><i class="fa-brands fa-facebook-f"></i></div><div><h5>Facebook</h5><a href="#">Facebook Page</a></div></div>
         <div class="c-item"><div class="c-item-icon"><i class="fa-brands fa-instagram"></i></div><div><h5>Instagram</h5><a href="#">@srmtrichynursing</a></div></div>
         <div class="c-item">
-          <div><h5 style="font-size:10.5px;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.38);margin-bottom:12px;font-weight:500">Follow Us</h5>
+          <div><h5 class="follow-us">Follow Us</h5>
           <div class="social-row">
             <a class="soc-btn" href="#"><i class="fa-brands fa-facebook-f"></i></a>
             <a class="soc-btn" href="#"><i class="fa-brands fa-x-twitter"></i></a>
@@ -794,9 +561,9 @@ footer{background:#0d0620;padding:0}
   <div class="footer-bottom">
     <p>© 2025 SRM Trichy College of Nursing. All Rights Reserved.</p>
     <div class="fbot-accred">
-      <span class="acc-badge"><i class="fa-solid fa-shield-halved" style="color:var(--accent);opacity:.7"></i> INC Approved</span>
-      <span class="acc-badge"><i class="fa-solid fa-leaf" style="color:var(--green);opacity:.8"></i> Green Campus</span>
-      <span class="acc-badge"><i class="fa-solid fa-star" style="color:var(--gold);opacity:.8"></i> NAAC Accredited</span>
+      <span class="acc-badge"><i class="fa-solid fa-shield-halved"></i> INC Approved</span>
+      <span class="acc-badge"><i class="fa-solid fa-leaf"></i> Green Campus</span>
+      <span class="acc-badge"><i class="fa-solid fa-star"></i> NAAC Accredited</span>
     </div>
     <div class="fbot-links">
       <a href="#">Privacy Policy</a>
@@ -806,13 +573,6 @@ footer{background:#0d0620;padding:0}
   </div>
 </footer>
 
-<script>
-  function toggleMobileNav(){document.getElementById('mobileNav').classList.toggle('open')}
-  window.addEventListener('scroll',()=>{document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>30)})
-  const obs=new IntersectionObserver((entries)=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*90);obs.unobserve(e.target)}})},{threshold:.1})
-  document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el))
-  function animateCounters(){document.querySelectorAll('.stat-num').forEach(el=>{const sup=el.querySelector('sup')?el.querySelector('sup').outerHTML:'';const num=parseInt(el.textContent.replace(/\D/g,''));if(!num)return;let cur=0;const step=Math.max(1,Math.ceil(num/50));const t=setInterval(()=>{cur=Math.min(cur+step,num);el.innerHTML=cur+sup;if(cur>=num)clearInterval(t)},28)})}
-  setTimeout(animateCounters,500)
-</script>
+<script src="./assets/js/script.js"></script>
 </body>
 </html>
