@@ -6,10 +6,10 @@
 <title>SRM Trichy College of Nursing</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,700;0,800;1,600;1,700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Turret+Road:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="fav icon" href="./assets/images/fav.png">
 <link rel="stylesheet" href="./assets/css/common/rootvalue.css">
+<link rel="stylesheet" href="./assets/css/pages/swiper.css">
 <link rel="stylesheet" href="./assets/css/common/header_footer.css">
 <link rel="stylesheet" href="./assets/css/pages/homepage.css">
 </head>
@@ -190,8 +190,7 @@
 </div>
 
 <!-- HERO -->
-<section class="hero">
-  <!-- SVG illustrated nursing college scene -->
+<!-- <section class="hero">
   
   <div class="hero-inner">
     <div class="hero-card-wrap">
@@ -216,7 +215,96 @@
     </div>
     
   </div>
-</section>
+</section> -->
+
+<div class="swiper-root" id="swiper">
+
+  <div class="slides-track" id="track">
+
+    <!-- Slide 1 -->
+    <div class="slide active" data-index="0">
+      <div class="slide-bg" style="background-image: url('./assets/images/banner/1.JPG');"></div>
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <div class="slide-badge"><span class="slide-dot-accent"></span> Est. 2003 — Excellence in Care</div>
+        <h1 class="slide-title">Shaping the Future of<br><span>Nursing Excellence</span></h1>
+        <p class="slide-desc">A premier nursing institution dedicated to producing compassionate, skilled healthcare professionals ready for tomorrow's challenges.</p>
+        <div class="slide-actions">
+          <button class="btn-primary">Explore Programs <span class="arrow-icon"></span></button>
+          <button class="btn-outline">Apply Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide" data-index="1">
+      <div class="slide-bg" style="background-image: url('./assets/images/banner/2.JPG');"></div>
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <div class="slide-badge"><span class="slide-dot-accent"></span> World-Class Facilities</div>
+        <h1 class="slide-title">State-of-the-Art<br><span>Clinical Training Labs</span></h1>
+        <p class="slide-desc">Hands-on learning with advanced simulation labs, clinical wards, and real hospital partnerships that prepare you for every scenario.</p>
+        <div class="slide-actions">
+          <button class="btn-primary">View Facilities <span class="arrow-icon"></span></button>
+          <button class="btn-outline">Take a Tour</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide" data-index="2">
+      <div class="slide-bg" style="background-image: url('./assets/images/banner/3.JPG');"></div>
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <div class="slide-badge"><span class="slide-dot-accent"></span> 98% Placement Rate</div>
+        <h1 class="slide-title">From Classroom<br><span>to Career, Seamlessly</span></h1>
+        <p class="slide-desc">Our dedicated placement cell connects graduates with top hospitals, clinics, and healthcare networks across the country and abroad.</p>
+        <div class="slide-actions">
+          <button class="btn-primary">Career Outcomes <span class="arrow-icon"></span></button>
+          <button class="btn-outline">Meet Alumni</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="slide" data-index="3">
+      <div class="slide-bg" style="background-image: url('./assets/images/banner/4.JPG');"></div>
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <div class="slide-badge"><span class="slide-dot-accent"></span> Admissions Open 2025</div>
+        <h1 class="slide-title">Begin Your Journey<br><span>in Healthcare Today</span></h1>
+        <p class="slide-desc">Enroll in our B.Sc, M.Sc Nursing or Post-Basic programs. Limited seats available — secure your future in nursing now.</p>
+        <div class="slide-actions">
+          <button class="btn-primary">Admission Portal <span class="arrow-icon"></span></button>
+          <button class="btn-outline">Download Prospectus</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Prev / Next -->
+  <button class="nav-btn nav-prev" id="prevBtn" aria-label="Previous slide">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+  </button>
+  <button class="nav-btn nav-next" id="nextBtn" aria-label="Next slide">
+    <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+  </button>
+
+ 
+
+  <!-- Bottom bar -->
+  <div class="swiper-bottom">
+    <div ></div>
+    <div class="indicators" id="indicators"></div>
+    <div class="slide-counter"><span id="curNum">01</span> / 04</div>
+  </div>
+
+</div>
+
+
+
+
 <div class="marquee-bar">
   <div class="mq-label"><i class="fa-solid fa-bell"></i> Latest News</div>
   <div class="mq-track"><div class="mq-inner">
@@ -490,6 +578,7 @@
   </div>
 </footer>
 
+<script src="./assets/js/swiper.js"></script>
 <script src="./assets/js/script.js"></script>
 </body>
 </html>
