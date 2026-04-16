@@ -3,69 +3,52 @@
 ═════════════════════════════════════ */
 
 :root {
-
   /* Brand colours */
   --primary:#40286f;
   --primary-dark:#2c1b52;
   --primary-mid:#5a3db5;
   --primary-light:#4e28c9;
-
-  --accent:#bad32b;
+  --accent:#cd2bd3;
   --accent-vivid:#0f8b8f;
-
-  --gold:#c6e420;
-  --gold-light:#bad32b;
-
+  --gold:#ffbde2;
+  --gold-light:#ffceef;
   --teal:#0ea5a4;
   --green:#22c55e;
-
   --white:#ffffff;
   --off-white:#faf9ff;
   --light-bg:#f5f1ff;
-
   --text-dark:#1e1033;
   --text-body:#374151;
   --text-muted:#6b7280;
-
   --border:#e5defc;
-
-  --orange:#f6c949;
-
-  --main-bg-badge:#f59e0b1f;
-  --main-bg-badge-border:#f59e0b66;
-
+  --orange:#f6deff;
+  --main-bg-badge:#f50be21f;
+  --main-bg-badge-border:#f50b8066;
   /* Quick link gradients */
   --ql-admission-bg:linear-gradient(135deg,#6a5af9,#8f84ff);
   --ql-results-bg:linear-gradient(135deg,#00b09b,#96c93d);
   --ql-fee-bg:linear-gradient(135deg,#ff9966,#ff5e62);
   --ql-library-bg:linear-gradient(135deg,#36d1dc,#5b86e5);
   --ql-clinical-bg:linear-gradient(135deg,#f7971e,#ffd200);
-
   /* Section alt background */
   --odd-section-bg:#f0ebff;
-
   /* Layout */
   --mobile-menu-width:300px;
   --section-padding:88px 10%;
   --nav-h:58px;
-
   /* Typography */
   --font-main:'Poppins',sans-serif;
   --font-cursive:'Dancing Script',cursive;
-  --font-serif:"Turret Road",sans-serif;
-
+  --font-serif:"Montserrat Alternates", sans-serif;
   /* Motion */
   --ease:0.3s cubic-bezier(0.4,0,0.2,1);
-    
   /* Conduct / Policy Page */
   --policy-bg:#f7f4ff;
   --policy-card:#ffffff;
   --policy-heading:#2c1b52;
   --policy-number:#40286f;
-
   --policy-border:#e7e1ff;
   --policy-highlight:#f1ecff;
-
   --policy-student:#5a3db5;
   --policy-hostel:#0ea5a4;
   --policy-ragging:#ef4444;
@@ -74,19 +57,13 @@
   --policy-support:#6366f1;
   --acad-primary:#40286f;
   --acad-primary-dark:#2c1b52;
-
   --acad-text:#333;
   --acad-border:#e5e5e5;
   --acad-bg:#ffffff;
   --acad-soft:#f7f7fb;
-
   --acad-radius:10px;
   --acad-shadow:0 6px 20px rgba(0,0,0,0.06);
-
   --acad-section-padding:80px 20px;
-
-
-
 }
 
 /* RESET */
