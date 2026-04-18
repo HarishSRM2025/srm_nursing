@@ -242,16 +242,20 @@ myFooter.innerHTML=`
     </div>
   </div>`;
 
-const currentPage = window.location.pathname.split("/").pop();
-console.log(currentPage);
+const currenturl=window.location.pathname;
+if(currenturl.includes(".html")){
+  const currentPage = currenturl.split("/").pop();
+  document.querySelectorAll(".tab").forEach(tab => {
+    
+    const link = tab.getAttribute("href");
 
+    if (link.includes(currentPage)) {
+      tab.classList.add("active");
+    }
+  });
+}
+else{
+  const homeId=document.querySelector("#home");
+  homeId.classList.add('active');
+}
 
-document.querySelectorAll(".tab").forEach(tab => {
-  
-  const link = tab.getAttribute("href");
-
-  if (link.includes(currentPage)) {
-    console.log("yes");
-    tab.classList.add("active");
-  }
-});
