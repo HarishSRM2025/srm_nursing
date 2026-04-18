@@ -1,0 +1,179 @@
+/* SECTION */
+.placement-section {
+  padding: var(--section-padding);
+  background: var(--light-bg);
+}
+.placement-section2 {
+  padding:0 150px 70px;
+  background: white;
+}
+
+/* TITLE */
+.section-title h2 {
+  color: var(--primary);
+  font-size: 34px;
+  margin-bottom: 8px;
+}
+
+.section-title p {
+  color: var(--text-muted);
+}
+
+/* GRID */
+.batch-container {
+  display: grid;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+/* CARD */
+.batch-card {
+  background: var(--white);
+  border-radius: var(--placement-card-radius);
+  padding: 28px;
+  box-shadow: var(--placement-shadow);
+  transition: var(--ease);
+  border: 1px solid var(--border);
+}
+
+.batch-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--placement-hover-shadow);
+}
+
+/* HEADER */
+.batch-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--placement-divider);
+  padding-bottom: 12px;
+  margin-bottom: 18px;
+}
+
+.batch-header h3 {
+  color: var(--primary);
+}
+
+.subtitle {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* BADGE */
+.total {
+  background: var(--placement-badge-bg);
+  color: var(--primary);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* LIST */
+.placement-list {
+  list-style: none;
+  padding: 0;
+  columns: 2;
+}
+
+.placement-list li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-left: 18px;
+  position: relative;
+  font-size: 14px;
+}
+
+.placement-list li::before {
+  content: "◆";
+  position: absolute;
+  left: 0;
+  color: var(--accent-vivid);
+  font-size: 10px;
+  top: 6px;
+}
+
+.placement-list span {
+  color: var(--text-body);
+}
+
+.placement-list b {
+  color: var(--primary);
+}
+
+/* INTERNATIONAL */
+.international {
+  margin-top: 60px;
+}
+
+.intl-header h3 {
+  color: var(--primary);
+  margin-bottom: 5px;
+}
+
+.intl-header p {
+  color: var(--text-muted);
+  margin-bottom: 25px;
+}
+
+/* INTERNATIONAL GRID */
+.intl-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 25px;
+}
+
+/* INTERNATIONAL CARD */
+.intl-card {
+  background: linear-gradient(135deg, var(--primary), var(--primary-mid));
+  color: var(--white);
+  padding: 24px;
+  border-radius: var(--placement-card-radius);
+  box-shadow: var(--placement-shadow);
+  transition: var(--ease);
+  position: relative;
+}
+
+.intl-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--placement-hover-shadow);
+}
+
+/* TOP */
+.intl-top h4 {
+  margin-bottom: 4px;
+}
+
+.role {
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+/* HOSPITAL */
+.hospital {
+  margin: 12px 0;
+  font-size: 14px;
+}
+
+/* COUNTRY TAG */
+.country {
+  display: inline-block;
+  background: var(--gold-light);
+  color: var(--primary-dark);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ICON EFFECT */
+.intl-card::after {
+  content: "✈";
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  font-size: 18px;
+  opacity: 0.7;
+}

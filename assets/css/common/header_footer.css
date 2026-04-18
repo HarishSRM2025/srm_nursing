@@ -61,7 +61,7 @@ position:relative;
 display:none;
 position:absolute;
 top:0px;
-left:100%;
+left:-92%;
 background:#fff;
 min-width:230px;
 border:1px solid var(--border);
@@ -84,8 +84,34 @@ margin-left:auto;
 
 .nav-links { display: flex; list-style: none; flex: 1; justify-content: center; }
 .nav-links li { position: relative; }
-.nav-links li > a { display: flex; align-items: center; gap:14px; padding:0 20px; height:30px; font-size: 12.5px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--text-body); text-decoration: none; margin-bottom: -3px; transition: color var(--ease), border-color var(--ease); }
-.nav-links li > a:hover, .nav-links li > a.active { color: var(--white); background: var(--primary); border-bottom-color: var(--accent);}
+.nav-links li > a { display: flex; align-items: center;margin-right:30px; padding:0;height:30px; font-size: 12.5px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--text-body); text-decoration: none; margin-bottom: -3px; transition: color var(--ease), border-color var(--ease); }
+.nav-links li > a:hover, .nav-links li > a.active { 
+  position:relative;
+  color:#da4fbb;
+}
+
+.nav-links li > a.active::before{
+  content:'';
+  position:absolute;
+  top:5%;
+  left:-8px;
+  border-radius:100px;
+  height:90%;
+  width:2px;
+  background:#da4fbb;
+  transition:4s;
+}
+.nav-links li > a.active::after{
+  content:'';
+  position:absolute;
+  top:20%;
+  left:-12px;
+  border-radius:100px;
+  height:2px;
+  width:10px;
+  background:#da4fbb;
+  transition:4s;
+}
 .chevron { font-size: 8px; opacity: .5; }
 
 .dropdown { display: none; position: absolute; top: 100%; left: 0; background: var(--white); min-width: 250px; border: 1px solid var(--border); border-top: 3px solid var(--accent); z-index: 9999; animation: dropIn .2s ease; }
@@ -103,6 +129,47 @@ margin-left:auto;
 .hamburger span { width: 24px; height: 2px; background: var(--primary); display: block; }
 
 footer { background: #0d0620; padding: 0; }
+/* Facebook */
+.f-soc{
+   color:white;
+   border-radius:10px;
+}
+.f-soc:nth-child(1) {
+  background: #1877F2;
+}
+
+/* Twitter (X) */
+.f-soc:nth-child(2) {
+  background: #000000;
+}
+
+/* Instagram */
+.f-soc:nth-child(3) {
+  background: linear-gradient(
+    45deg,
+    #feda75,
+    #fa7e1e,
+    #d62976,
+    #962fbf,
+    #4f5bd5
+  );
+}
+
+/* LinkedIn */
+.f-soc:nth-child(4) {
+  background: #0A66C2;
+}
+
+/* YouTube */
+.f-soc:nth-child(5) {
+  background: #FF0000;
+}
+
+/* Hover effect */
+.f-soc:hover {
+  transform: translateY(-4px) scale(1.05);
+  filter: brightness(1.1);
+}
 .footer-alert { background: linear-gradient(90deg, var(--gold), var(--orange)); padding: 0 5%; display: flex; justify-content: space-between; align-items: center; height: 50px; }
 .footer-alert p { font-size: 12.5px; font-weight: 700; color: var(--primary-dark); display: flex; align-items: center; gap: 9px; letter-spacing: .02em; }
 .footer-alert p i { font-size: 15px; }
@@ -116,8 +183,7 @@ footer { background: #0d0620; padding: 0; }
 .fl-txt .fl-sub { font-size: 9.5px; text-transform: uppercase; letter-spacing: .18em; color: rgba(255,255,255,.38); margin-top: 2px; }
 .footer-brand p { font-size: 12.5px; color: rgba(255,255,255,.48); line-height: 1.75; font-weight: 300; margin-bottom: 20px; }
 .f-social { display: flex; gap: 9px; }
-.f-soc { width: 34px; height: 34px; background: rgba(255,255,255,.07); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,.48); text-decoration: none; transition: all var(--ease); }
-.f-soc:hover { background: var(--primary-light); color: #fff; }
+.f-soc { width: 34px; height: 34px; background: rgba(255,255,255,.07); display: flex; align-items: center; justify-content: center;  text-decoration: none; transition: all var(--ease); }
 .f-soc i { font-size: 13px; }
 .fcol-title { font-size: 11px; text-transform: uppercase; letter-spacing: .18em; color: var(--gold); font-weight: 700; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,.07); }
 .footer-col ul { list-style: none; }

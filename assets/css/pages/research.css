@@ -1,0 +1,75 @@
+/* ==========================================
+   RESEARCH PAGE
+========================================== */
+
+.research-section{
+  padding:var(--section-padding);
+  background:var(--off-white);
+}
+
+.research-container{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:var(--research-gap);
+}
+
+
+/* TITLE */
+
+.research-title{
+  font-size:var(--research-title-size);
+  color:var(--primary-dark);
+  margin-bottom:20px;
+  font-weight:600;
+}
+
+/* TABLE */
+
+.research-table{
+  width:100%;
+  border-collapse:collapse;
+  background:#fff;
+  overflow:hidden;
+}
+
+.research-table thead{
+  background:var(--research-table-head);
+}
+
+.research-table th{
+  text-align:left;
+  padding:14px;
+  font-size:13px;
+  color:var(--primary-dark);
+  border:1px solid var(--research-table-border);
+}
+
+.research-table td{
+  padding:14px;
+  font-size:13px;
+  color:var(--research-table-text);
+  border:1px solid var(--research-table-border);
+  line-height:1.6;
+}
+.research-table tr td:nth-child(4) span{
+    background:#d2ffb5;
+    padding:2px 8px;
+    font-weight:600;
+    font-size:11px;
+    border-radius:4px;
+    color:#333;
+}
+.research-table tbody tr:hover{
+  background:var(--research-row-hover);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+  .research-table{
+    display:block;
+    overflow-x:auto;
+  }
+}

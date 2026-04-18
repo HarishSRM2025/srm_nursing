@@ -8,7 +8,7 @@
   --primary-dark:#2c1b52;
   --primary-mid:#5a3db5;
   --primary-light:#4e28c9;
-  --accent:#cd2bd3;
+  --accent:#76529e;
   --accent-vivid:#0f8b8f;
   --gold:#ffbde2;
   --gold-light:#ffceef;
@@ -64,6 +64,58 @@
   --acad-radius:10px;
   --acad-shadow:0 6px 20px rgba(0,0,0,0.06);
   --acad-section-padding:80px 20px;
+
+  --fac-card-radius:18px;
+  --fac-img-height:220px;
+  --fac-overlay:linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+  --fac-title-size:20px;
+  --fac-desc-size:14px;
+  --fac-gap:30px;
+  --fac-card-padding:18px;
+  --fac-hover-scale:1.05;
+  --fac-transition:0.4s ease;
+
+  --clinical-card-radius:20px;
+  --clinical-img-height:240px;
+  --clinical-overlay:linear-gradient(to top, rgba(0,0,0,0.65), transparent);
+  --clinical-title-size:22px;
+  --clinical-desc-size:14px;
+  --clinical-gap:30px;
+  --clinical-padding:20px;
+  --clinical-hover-scale:1.06;
+  --clinical-transition:0.4s ease;
+  --clinical-section-gap:50px;
+
+  --research-card-radius:16px;
+  --research-gap:30px;
+  --research-padding:24px;
+  --research-title-size:22px;
+  --research-table-head:#f1ecff;
+  --research-table-border:#e5defc;
+  --research-table-text:#374151;
+  --research-row-hover:#f9f7ff;
+
+  --placement-card-radius:16px;
+  --placement-shadow:0 10px 30px rgba(0,0,0,0.08);
+  --placement-hover-shadow:0 15px 40px rgba(0,0,0,0.12);
+  --placement-badge-bg:#f1ecff;
+  --placement-divider:#e5defc;
+  --placement-highlight:#f7f4ff;
+
+  /* ASSOCIATION PAGE */
+  --assoc-card-radius:18px;
+  --assoc-section-gap:60px;
+  --assoc-card-padding:28px;
+  --assoc-title-size:26px;
+  --assoc-subtitle-size:18px;
+  --assoc-line:#dcd6ff;
+  --assoc-highlight:#f4f1ff;
+  --assoc-gradient:linear-gradient(135deg,var(--primary),var(--primary-mid));
+  --assoc-soft-bg:#fbfaff;
+  --assoc-icon-bg:#ede9ff;
+  --assoc-border:#e6e1ff;
+  --assoc-shadow:0 8px 30px rgba(64,40,111,0.08);
+  --assoc-hover:0.35s ease;
 }
 
 /* RESET */
@@ -138,3 +190,89 @@ body{
   color:#ffffff;
   font-weight:600;
 }
+
+.clinical-list li,
+.acad-card ul li,
+.meeting-box ul li
+{
+  list-style:none;
+  padding-left:24px;
+  position:relative;
+}
+.clinical-list li::before,
+.acad-card ul li::before,
+.meeting-box ul li::before {
+  content: "➜";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #2e7d32;
+  font-weight: bold;
+  font-size: 16px;
+}
+.social-toggle {
+  position: fixed;
+  right: 0px;
+  bottom: 30%;
+  z-index: 999;
+}
+
+
+
+/* Main Button */
+#toggleBtn {
+  width: 25px;
+  height: 25px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  background:transparent;
+  border:none;
+}
+
+
+
+/* Social Icons Container */
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+
+  transition: 0.35s ease;
+}
+
+/* Active State */
+.social-icons.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Individual Icons */
+.soc {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size:20px;
+  text-decoration:none;
+  transition: 0.3s ease;
+  box-shadow: var(--acad-shadow);
+}
+
+.soc:hover {
+  transform: scale(1.1);
+}
+
+/* Brand Colors */
+.fb { background:#1877F2; }
+.x { background:#000; }
+.ig { background:linear-gradient(45deg,#feda75,#d62976,#4f5bd5); }
+.li { background:#0A66C2; }
+.yt { background:#FF0000; }
