@@ -1,0 +1,267 @@
+/* =========================
+   ASSOCIATION PAGE
+========================= */
+
+.association-section {
+  padding: var(--section-padding);
+  background: var(--assoc-soft-bg);
+}
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.assoc-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.assoc-title h2 {
+  font-size: 34px;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.assoc-title p {
+  color: var(--text-muted);
+  font-size: 15px;
+}
+
+/* =========================
+   CARD BASE
+========================= */
+
+.assoc-card {
+  background: var(--white);
+  border-radius: var(--assoc-card-radius);
+  padding: var(--assoc-card-padding);
+  box-shadow: var(--assoc-shadow);
+  margin-bottom: var(--assoc-section-gap);
+  transition: var(--assoc-hover);
+  border: 1px solid var(--assoc-border);
+}
+
+.assoc-card:hover {
+  transform: translateY(-6px);
+}
+
+/* =========================
+   HEADINGS
+========================= */
+
+.assoc-card h3 {
+  font-size: var(--assoc-title-size);
+  color: var(--primary-dark);
+  margin-bottom: 15px;
+}
+
+.assoc-card h4 {
+  font-size: var(--assoc-subtitle-size);
+  color: var(--secondary);
+  margin-bottom: 10px;
+}
+
+/* =========================
+   PARAGRAPH
+========================= */
+
+.assoc-card p {
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+/* =========================
+   LIST STYLE (Diamond ✔ Replacement)
+========================= */
+
+.assoc-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.assoc-list li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 10px;
+}
+
+.assoc-list li::before {
+  content: "◆";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-size: 12px;
+}
+
+/* =========================
+   GRID LAYOUT
+========================= */
+
+.assoc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 25px;
+}
+
+/* =========================
+   HIGHLIGHT BOX (AIMS / OBJECTIVES)
+========================= */
+
+.assoc-highlight {
+  background: var(--assoc-highlight);
+  border-left: 5px solid var(--primary);
+  padding: 18px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   RESPONSIBILITY CARDS
+========================= */
+
+.role-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 20px;
+}
+
+.role-card {
+  background: var(--assoc-gradient);
+  color: var(--white);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: var(--assoc-shadow);
+}
+
+.role-card h4 {
+  margin-bottom: 10px;
+  color: var(--gold-light);
+}
+
+.role-card ul li::before {
+  color: var(--gold-light);
+}
+
+/* =========================
+   ELECTION TABLE
+========================= */
+
+.assoc-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.assoc-table th {
+  background: var(--primary);
+  color: var(--white);
+  padding: 12px;
+  font-size: 14px;
+}
+
+.assoc-table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--assoc-border);
+  font-size: 14px;
+}
+
+.assoc-table tr:hover {
+  background: var(--assoc-highlight);
+}
+
+/* =========================
+   CLUB CARDS (YRC / BOOK / etc)
+========================= */
+
+.club-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  padding: 25px;
+  color: var(--white);
+  background: var(--assoc-gradient);
+  transition: var(--assoc-hover);
+}
+
+.club-card:hover {
+  transform: scale(1.03);
+}
+
+.club-card::after {
+  content: "★";
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  opacity: 0.2;
+}
+
+/* =========================
+   CALENDAR GRID
+========================= */
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 15px;
+}
+
+.calendar-item {
+  background: var(--white);
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 4px solid var(--primary);
+  box-shadow: var(--assoc-shadow);
+}
+
+.calendar-item span {
+  display: block;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* =========================
+   ALUMNI LIST
+========================= */
+
+.alumni-box {
+  max-height: 350px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.alumni-box li {
+  border-bottom: 1px dashed var(--assoc-line);
+  padding-bottom: 6px;
+}
+
+/* =========================
+   EVENT CARD
+========================= */
+
+.event-card {
+  background: var(--assoc-highlight);
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid var(--primary-mid);
+}
+
+.event-card h4 {
+  color: var(--primary);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+  .assoc-title h2 {
+    font-size: 26px;
+  }
+
+  .assoc-card {
+    padding: 20px;
+  }
+
+}

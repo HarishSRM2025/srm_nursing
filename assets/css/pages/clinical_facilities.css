@@ -1,0 +1,108 @@
+/* ==========================================
+   CLINICAL FACILITIES PAGE
+========================================== */
+
+.clinical-section{
+  padding:var(--section-padding);
+  background:var(--off-white);
+}
+
+.clinical-container{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:var(--clinical-section-gap);
+}
+
+/* GRID */
+
+.clinical-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:var(--clinical-gap);
+}
+
+@media(max-width:900px){
+  .clinical-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+/* CARD */
+
+.clinical-card{
+  background:var(--white);
+  border-radius:var(--clinical-card-radius);
+  overflow:hidden;
+  box-shadow:var(--acad-shadow);
+  transition:transform var(--clinical-transition), box-shadow var(--clinical-transition);
+  display:flex;
+  flex-direction:column;
+}
+
+.clinical-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 25px 50px rgba(0,0,0,0.15);
+}
+
+/* IMAGE */
+
+.clinical-img{
+  position:relative;
+  height:var(--clinical-img-height);
+  overflow:hidden;
+}
+
+.clinical-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform var(--clinical-transition);
+}
+
+.clinical-card:hover .clinical-img img{
+  transform:scale(var(--clinical-hover-scale));
+}
+
+.clinical-img::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:var(--clinical-overlay);
+}
+
+/* CONTENT */
+
+.clinical-content{
+  padding:var(--clinical-padding);
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.clinical-title{
+  font-size:var(--clinical-title-size);
+  font-weight:600;
+  color:var(--primary-dark);
+}
+
+.clinical-desc{
+  font-size:var(--clinical-desc-size);
+  color:var(--text-muted);
+  line-height:1.8;
+}
+
+/* LIST */
+
+.clinical-list{
+  margin-top:10px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.clinical-list li{
+  font-size:var(--clinical-desc-size);
+  color:var(--text-muted);
+}
