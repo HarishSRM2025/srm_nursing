@@ -117,7 +117,6 @@ topMenu.innerHTML=`
   <div class="hamburger" onclick="toggleMobileNav()">
     <span></span><span></span><span></span>
   </div>`;
-
 mobileNav.innerHTML=`
     <a href="#"><i class="fa-solid fa-house"></i> Home</a>
 
@@ -169,7 +168,6 @@ mobileNav.innerHTML=`
     <i class="fa-solid fa-arrow-right"></i> Apply Now 2025–26
   </a>
 `;
-
 myFooter.innerHTML=`
   <!-- Alert bar matching screenshot -->
   <div class="footer-alert">
@@ -240,8 +238,7 @@ myFooter.innerHTML=`
       <a href="#">Terms of Use</a>
       <a href="#">Sitemap</a>
     </div>
-  </div>`;
-
+</div>`;
 const currenturl=window.location.pathname;
 if(currenturl.includes(".html")){
   const currentPage = currenturl.split("/").pop();
@@ -258,4 +255,3 @@ else{
   const homeId=document.querySelector("#home");
   homeId.classList.add('active');
 }
-
