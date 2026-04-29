@@ -39,7 +39,7 @@
   /* Typography */
   --font-main:'Poppins',sans-serif;
   --font-cursive:'Dancing Script',cursive;
-  --font-serif:"Montserrat Alternates", sans-serif;
+  --font-serif:'Poppins',sans-serif;
   /* Motion */
   --ease:0.3s cubic-bezier(0.4,0,0.2,1);
   /* Conduct / Policy Page */
@@ -144,9 +144,23 @@ body{
 ========================================== */
 
 .breadcrumb{
-  background:var(--primary-dark);
+  background:fixed url(../../images/bg44.jpg) no-repeat;
+  backdrop-filter:brightness(0.1);
+  background-size:cover;
   padding:170px 10% 160px;
   border-bottom:1px solid var(--border);
+}
+.breadcrumb::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:linear-gradient(to left,#3d2968c5,#110629); /* adjust darkness here */
+  z-index: 0;
+}
+
+.breadcrumb > * {
+  position: relative;
+  z-index: 1;
 }
 
 .breadcrumb-container{
@@ -276,3 +290,7 @@ body{
 .ig { background:linear-gradient(45deg,#feda75,#d62976,#4f5bd5); }
 .li { background:#0A66C2; }
 .yt { background:#FF0000; }
+a{
+  text-decoration:none;
+  color:var(--text-body);
+}
