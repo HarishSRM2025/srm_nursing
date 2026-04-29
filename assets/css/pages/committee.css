@@ -1,8 +1,8 @@
 /* Card Container */
-.container{
+.container2{
   width:1200px;
   margin:auto;
-  padding:50px 0;
+  padding:50px;
 }
 .committee-grid {
   display: grid;
@@ -74,4 +74,13 @@
 .meeting-box ul {
   margin-top: 10px;
   padding-left: 20px;
+}
+@media screen and (max-width:400px) {
+  .committee-grid{
+    gap:20px;
+  }
+  .container2{
+    padding:10px;
+    width:100%;
+  }
 }

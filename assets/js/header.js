@@ -118,7 +118,7 @@ topMenu.innerHTML=`
     <span></span><span></span><span></span>
   </div>`;
 mobileNav.innerHTML=`
-    <a href="#"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="./index.html"><i class="fa-solid fa-house"></i> Home</a>
 
   <!-- ADMINISTRATION -->
   <div class="mobile-group">
@@ -128,13 +128,13 @@ mobileNav.innerHTML=`
     <div class="dropdown">
       <a href="#"><i class="fa-solid fa-sitemap"></i> Organization Chart</a>
       <a href="#"><i class="fa-solid fa-scale-balanced"></i> Statutory Bodies</a>
-      <a href="#"><i class="fa-solid fa-file-lines"></i> Code of Conduct</a>
+      <a href="./codeofconduct.html"><i class="fa-solid fa-file-lines"></i> Code of Conduct</a>
     </div>
   </div>
 
   <!-- ACADEMICS -->
   <div class="mobile-group">
-    <a href="#" onclick="toggleSubmenu(event)">
+    <a href="./academics.html" onclick="toggleSubmenu(event)">
       Academics <i class="fa-solid fa-chevron-down chevron"></i>
     </a>
     <div class="dropdown">
@@ -148,7 +148,7 @@ mobileNav.innerHTML=`
 
   <!-- CLINICAL -->
   <div class="mobile-group">
-    <a href="#" onclick="toggleSubmenu(event)">
+    <a href="./clinical_facilities.html" onclick="toggleSubmenu(event)">
       Clinical Facilities <i class="fa-solid fa-chevron-down chevron"></i>
     </a>
     <div class="dropdown">
@@ -159,9 +159,9 @@ mobileNav.innerHTML=`
   </div>
 
   <!-- DIRECT LINKS -->
-  <a href="#"><i class="fa-solid fa-flask"></i> Research</a>
-  <a href="#"><i class="fa-solid fa-users"></i> Committees</a>
-  <a href="#"><i class="fa-solid fa-briefcase"></i> Placement</a>
+  <a href="./research.html"><i class="fa-solid fa-flask"></i> Research</a>
+  <a href="./committee.html"><i class="fa-solid fa-users"></i> Committees</a>
+  <a href="./placement.html"><i class="fa-solid fa-briefcase"></i> Placement</a>
   <a href="#"><i class="fa-solid fa-calendar"></i> Events</a>
 
   <a href="#" class="mobile-apply">
