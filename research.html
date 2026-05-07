@@ -39,8 +39,21 @@
 <section class="research-section">
 <div class="research-container">
 
-  <!-- 2023 -->
-
+  <div class="research-table-controls">
+    <div class="research-table-controls-left">
+    </div>
+    <div class="research-table-controls-right">
+      <label for="researchLength">Show</label>
+      <select id="researchLength">
+        <option value="5">5</option>
+        <option value="10" selected>10</option>
+        <option value="15">15</option>
+        <option value="20">20</option>
+      </select>
+      <span>Per Page</span>
+    </div>
+  </div>
+  <div class="research-table-info" id="researchTableInfo"></div>
 
     <table class="research-table">
       <thead>
@@ -142,6 +155,8 @@
 <footer id="myFooter"></footer>
 <script src="./assets/js/toggleBar.js"></script>
 <script src="./assets/js/header.js"></script>
+<script src="./assets/js/research.js"></script>
 <script src="./assets/js/script.js"></script>
+
 </body>
 </html>

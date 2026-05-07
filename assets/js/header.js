@@ -24,7 +24,7 @@ topMenu.innerHTML=`
     <li>
       <a href="#" onclick="setActive(this)" id=${idName[1]} class='tab'>Administration <i class="fa-solid fa-chevron-down chevron"></i></a>
       <div class="dropdown">
-        <a href="#"><i class="fa-solid fa-sitemap"></i> Organization Chart</a>
+        <a href="./assets/pdf/org-chart.pdf" target='_blank'><i class="fa-solid fa-sitemap"></i> Organization Chart</a>
         <a href="#"><i class="fa-solid fa-scale-balanced"></i> Statutory Bodies</a>
         <a href="codeofconduct.html"><i class="fa-solid fa-file-lines"></i> Code of Conduct</a>
       </div>
@@ -53,7 +53,7 @@ topMenu.innerHTML=`
         <a href="#"><i class="fa-solid fa-user-check"></i> Admission</a>
         <a href="#"><i class="fa-solid fa-pen-to-square"></i> Application</a>
         <a href="#"><i class="fa-solid fa-graduation-cap"></i> Courses Offered</a>
-        <a href="#"><i class="fa-solid fa-calendar-days"></i> Academic Calendar</a>
+        <a href="./assets/pdf/Academic Calendar 2026.pdf" target='_blank'><i class="fa-solid fa-calendar-days"></i> Academic Calendar</a>
         <a href="#"><i class="fa-solid fa-award"></i> Awards</a>
       </div>
     </li>
@@ -118,7 +118,7 @@ topMenu.innerHTML=`
     <span></span><span></span><span></span>
   </div>`;
 mobileNav.innerHTML=`
-    <a href="./index.html"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
 
   <!-- ADMINISTRATION -->
   <div class="mobile-group">
@@ -126,9 +126,9 @@ mobileNav.innerHTML=`
       Administration <i class="fa-solid fa-chevron-down chevron"></i>
     </a>
     <div class="dropdown">
-      <a href="#"><i class="fa-solid fa-sitemap"></i> Organization Chart</a>
+      <a href="./assets/pdf/org-chart.pdf" target='_blank'><i class="fa-solid fa-sitemap"></i> Organization Chart</a>
       <a href="#"><i class="fa-solid fa-scale-balanced"></i> Statutory Bodies</a>
-      <a href="./codeofconduct.html"><i class="fa-solid fa-file-lines"></i> Code of Conduct</a>
+      <a href="codeofconduct.html"><i class="fa-solid fa-file-lines"></i> Code of Conduct</a>
     </div>
   </div>
 
@@ -141,7 +141,7 @@ mobileNav.innerHTML=`
       <a href="#"><i class="fa-solid fa-user-check"></i> Admission</a>
       <a href="#"><i class="fa-solid fa-pen-to-square"></i> Application</a>
       <a href="#"><i class="fa-solid fa-graduation-cap"></i> Courses Offered</a>
-      <a href="#"><i class="fa-solid fa-calendar-days"></i> Academic Calendar</a>
+      <a href="./assets/pdf/Academic Calendar 2026.pdf" target='_blank'><i class="fa-solid fa-calendar-days"></i> Academic Calendar</a>
       <a href="#"><i class="fa-solid fa-award"></i> Awards</a>
     </div>
   </div>
@@ -162,7 +162,7 @@ mobileNav.innerHTML=`
   <a href="./research.html"><i class="fa-solid fa-flask"></i> Research</a>
   <a href="./committee.html"><i class="fa-solid fa-users"></i> Committees</a>
   <a href="./placement.html"><i class="fa-solid fa-briefcase"></i> Placement</a>
-  <a href="#"><i class="fa-solid fa-calendar"></i> Events</a>
+  <a href="./association.html"><i class="fa-solid fa-handshake"></i> Associations</a>
 
   <a href="#" class="mobile-apply">
     <i class="fa-solid fa-arrow-right"></i> Apply Now 2025–26
