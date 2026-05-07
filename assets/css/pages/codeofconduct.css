@@ -137,13 +137,22 @@
 
 @media(max-width:1000px){
 
-.conduct-grid{
-  grid-template-columns:1fr;
-  column-count:1;
+  .conduct-grid{
+    grid-template-columns:1fr;
+    column-count:1;
+  }
+
+  .conduct-title-main h1{
+    font-size:32px;
+  }
+
 }
 
-.conduct-title-main h1{
-  font-size:32px;
-}
+@media(max-width:400px){
+
+
+  .conduct-card h2{
+    font-size:22px;
+  }
 
 }
