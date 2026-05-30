@@ -241,17 +241,28 @@ myFooter.innerHTML=`
 </div>`;
 const currenturl=window.location.pathname;
 if(currenturl.includes(".html")){
-  const currentPage = currenturl.split("/").pop();
+  const currentPage = decodeURIComponent(currenturl.split("/").pop());
   document.querySelectorAll(".tab").forEach(tab => {
     
     const link = tab.getAttribute("href");
 
-    if (link.includes(currentPage)) {
+    if (link && link.includes(currentPage)) {
       tab.classList.add("active");
     }
   });
+
+  // Highlight parent tabs for sub-pages
+  if (currentPage.includes("codeofconduct")) {
+    const adminTab = document.getElementById("admin");
+    if (adminTab) adminTab.classList.add("active");
+  } else if (currentPage.includes("clinical_facilities")) {
+    const facilityTab = document.getElementById("facility");
+    if (facilityTab) facilityTab.classList.add("active");
+  }
 }
 else{
   const homeId=document.querySelector("#home");
-  homeId.classList.add('active');
+  if(homeId) {
+    homeId.classList.add('active');
+  }
 }

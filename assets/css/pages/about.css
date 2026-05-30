@@ -1,0 +1,73 @@
+/* Premium About Section Styles */
+
+.about-college-section {
+  padding: var(--section-padding) 5%;
+  background: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-college-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.aboutSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.aboutContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutContent p {
+  font-size: 16px;
+  line-height: 1.85;
+  color: var(--text-body);
+  font-weight: 300;
+  margin-top: 16px;
+  text-align: justify;
+}
+
+.aboutimage {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(64, 40, 111, 0.1);
+}
+
+.aboutimage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 8px solid var(--white);
+  border-radius: 24px;
+  box-sizing: border-box;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.aboutimage img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.8s ease;
+}
+
+.aboutSection:hover .aboutimage img {
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 900px) {
+  .aboutSection {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}

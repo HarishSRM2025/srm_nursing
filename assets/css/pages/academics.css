@@ -1,115 +1,213 @@
 /* ======================================
-   ACADEMIC PAGE
+   ACADEMIC PAGE - SHARP MODERN DESIGN
 ====================================== */
 
-.acad-section{
-padding:var(--acad-section-padding);
-background:var(--acad-soft);
+.acad-section {
+  padding: 100px 5%;
+  background: #ffffff;
+  position: relative;
 }
 
-.acad-container{
-max-width:1300px;
-margin:auto;
+.acad-container {
+  max-width: 1300px;
+  margin: auto;
 }
 
 /* TITLE */
-
-.acad-title-main{
-text-align:center;
-margin-bottom:60px;
+.acad-title-main {
+  text-align: left;
+  margin-bottom: 80px;
+  border-left: 8px solid var(--accent-vivid);
+  padding-left: 24px;
 }
 
-.acad-title-main h1{
-font-size:40px;
-color:var(--acad-primary);
-margin-bottom:10px;
+.acad-title-main h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(36px, 5vw, 56px);
+  color: var(--primary-dark);
+  font-weight: 800;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
 }
 
-.acad-title-main p{
-color:#666;
-font-size:16px;
+.acad-title-main p {
+  color: var(--text-muted);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 12px;
 }
 
 /* GRID */
-
-.acad-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(520px,1fr));
-gap:30px;
+.acad-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 48px;
 }
 
-/* CARD */
-
-.acad-card{
-background:var(--acad-bg);
-padding:30px;
-border-radius:var(--acad-radius);
-box-shadow:var(--acad-shadow);
-border:1px solid var(--acad-border);
+/* SHARP CARD */
+.acad-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  position: relative;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
-.acad-card h2{
-color:var(--acad-primary);
-margin-bottom:15px;
-font-size:22px;
+/* Geometric Hover Shadow */
+.acad-card:hover {
+  transform: translate(-8px, -8px);
+  box-shadow: 16px 16px 0px var(--primary-dark);
+  border-color: var(--primary-dark);
 }
 
-.acad-card h3{
-margin-top:18px;
-margin-bottom:8px;
-font-size:18px;
-color:var(--acad-primary-dark);
+.acad-card-img {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  position: relative;
+  background: var(--light-bg);
+  border-bottom: 1px solid #e0e0e0;
+  transition: border-color 0.3s ease;
 }
 
-.acad-card p{
-color:var(--acad-text);
-line-height:1.6;
+.acad-card:hover .acad-card-img {
+  border-bottom-color: var(--primary-dark);
+}
+
+.acad-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1), filter 0.8s;
+  filter: grayscale(15%) contrast(1.05);
+}
+
+.acad-card:hover .acad-card-img img {
+  transform: scale(1.12);
+  filter: grayscale(0%) contrast(1.1);
+}
+
+.acad-card-content {
+  padding: 40px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.acad-card h2 {
+  color: var(--primary-dark);
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.acad-card h3 {
+  margin-top: 24px;
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: var(--accent-vivid);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding-bottom: 8px;
+}
+
+.acad-card p {
+  color: var(--text-body);
+  line-height: 1.8;
+  font-size: 16px;
+  margin-bottom: 16px;
 }
 
 .acad-card ul,
-.acad-card ol{
-padding-left:18px;
-margin-top:10px;
+.acad-card ol {
+  padding-left: 20px;
+  margin-top: 12px;
+  margin-bottom: 20px;
 }
 
-.acad-card li{
-margin-bottom:6px;
-line-height:1.5;
-color:var(--acad-text);
+.acad-card li {
+  margin-bottom: 10px;
+  line-height: 1.7;
+  color: var(--text-body);
+  font-size: 15px;
+  position: relative;
 }
 
 /* SPECIALITY LIST */
-
-.acad-speciality{
-margin-top:10px;
+.acad-speciality {
+  margin-top: 16px;
+  list-style: none;
+  padding-left: 0 !important;
 }
 
-.acad-speciality li{
-display:flex;
-justify-content:space-between;
-border-bottom:1px dashed var(--acad-border);
-padding:4px 0;
+.acad-speciality li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding: 12px 0;
+  font-weight: 500;
 }
 
-/* DOWNLOAD BOX */
-
-.acad-download{
-margin-top:10px;
-padding:14px;
-background:#fafafa;
-border:1px dashed var(--acad-border);
-border-radius:6px;
-font-size:14px;
+.acad-speciality li span {
+  background: var(--primary-dark);
+  color: #fff;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
-@media screen and (max-width:400px) {
-   .acad-grid{
-      grid-template-columns:1fr;
-   }
-   .acad-speciality li{
-      flex-direction:column;
-   }
-   .acad-title-main h1{
-      font-size: 32px;
-   }
+/* SHARP DOWNLOAD BUTTON */
+.acad-download {
+  margin-top: auto;
+  padding: 18px 24px;
+  background: #f8f9fa;
+  border: 1px solid #d0d0d0;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--primary-dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+.acad-download:hover {
+  background: var(--accent-vivid);
+  color: #fff;
+  border-color: var(--accent-vivid);
+}
+
+.acad-download i {
+  font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+  .acad-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .acad-title-main {
+    margin-bottom: 40px;
+    padding-left: 16px;
+    border-left-width: 6px;
+  }
 }
